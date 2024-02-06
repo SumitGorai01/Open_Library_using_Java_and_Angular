@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+<div class="container">
+
+	<div class="screen">
+
+		<div class="screen__content">
+			<h3>User Login</h3>
+			<form class="login" (ngSubmit)="formSubmit()">
+				<mat-form-field class="full-width" appearance="outline">
+					<mat-label>User Name</mat-label>
+					<input [(ngModel)]="loginData.username" name="username" matInput placeholder="Enter username" required="">
+					<mat-hint>Valid username !!</mat-hint>
+				  </mat-form-field>
+
+				<!-- password field -->
+				<mat-form-field class="full-width" appearance="outline">
+					<mat-label>Password</mat-label>
+					<input [(ngModel)]="loginData.password"  name="password" type="password" matInput placeholder="Enter Password" required="">
+				  </mat-form-field>
+			
+				<button type="submit" class="button login__submit" matTextSuffix="">
+					<span class="button__text">Log In Now</span> <i
+						class="button__icon fas fa-chevron-right"></i>
+				</button>
+			</form>
+			<h4>
+				Don't have an account? <span><a href="/signup">Register</a></span>
+			</h4>
+			<br>
+			<h5>
+				<a href="/"><span>Back to Home Page</span></a>
+			</h5>
+
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>
+	</div>
+</div>

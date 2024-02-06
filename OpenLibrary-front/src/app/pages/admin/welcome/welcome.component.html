@@ -1,0 +1,64 @@
+<link rel="stylesheet" type="text/css"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+    
+<div class="bootstrap-wrapper">
+    <div class="container text-center">
+        <h1>Wlecome To Admin Panel</h1>
+        <img src="../../../../assets/Welcome.gif" alt="">
+        <div class="wrapper">
+
+            <div th:replace="fragments/sidebar"></div>
+    
+            <!-- Page Content  -->
+            <div id="content">
+    
+                <div th:replace="fragments/navbar"></div>
+    
+                <div class="row" id="a">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-4" id="a">
+                        <div class="card text-white text-center">
+                            <div class="card-header ">Total Books</div>
+                            <div class="card-body  text-primary">
+                                <!--<h5 class="card-title">Total Books</h5>-->
+                                <p class="card-text">Total No. of books available:</p>
+                                <a href="/book" class="btn btn-primary">View Books</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4" id="a">
+                        <div class="card text-white text-center">
+                            <div class="card-header ">Total Authors</div>
+                            <div class="card-body">
+                                <p class="card-text">Total Authors:</p>
+                                <a href="/author" class="btn btn-primary">View Authors</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4" id="a">
+                        <div class="card text-white text-center">
+                            <div class="card-header ">Register User</div>
+                            <div class="card-body">
+    
+                                <p class="card-text">Total no. of Users
+                                    Register:&nbsp;&nbsp;&nbsp;</p>
+                                <a href="/showAllUser" class="btn btn-primary">View Register
+                                    User</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+    
+            </div>
+        </div>
+
+    </div>
+</div>

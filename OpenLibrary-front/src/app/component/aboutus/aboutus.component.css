@@ -1,0 +1,148 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body{
+   margin:0;
+   padding:0;
+   font-family: 'Roboto', sans-serif;
+   position:relative;
+}
+.container{
+   width:100%;
+}
+.container h1{
+   font-size:50px
+}
+.about{
+   padding:1% 0;
+   width:100%;
+   height:auto;
+   background-color:#fff;
+}
+.about .left{
+   /* padding: 0; */
+   /* float:left; */
+   width:50%;
+   display:inline-block;
+}
+.about .right{
+   width:50%;
+   display:inline-block;
+}
+.about .right img{
+   padding-top: 2%;
+   width:65%;  
+   
+}
+
+.about .left h1{
+   text-align:center;
+   color:#1EADFF;
+   margin:0 0 10px 0;
+   
+}
+.about .left hr{
+   width:20%;
+   border-top:2px solid #000;
+   border-bottom:none;
+}
+.about .left p{
+   font-size:1rem;
+   margin:40px auto;
+   width:80%
+}
+
+.mission{
+   /* padding:1% 0; */
+   width:100%;
+   height:auto;
+   background-color:white;
+}
+.mission .right{
+   padding:0.5% 0;
+   width:50%;
+   display:inline-block;
+}
+.mission .left{
+   /* float:left; */
+   width:50%;
+
+   display:inline-block;
+}
+.mission .left img{
+   padding-top: 2%;
+   padding-left: 10%;
+   width:60%;
+}
+.mission .right h1{
+   text-align:center;
+   color:#1EADFF;
+   margin:0 0 20px 0;
+}
+.mission .right hr{
+   width:35%;
+   border-top:2px solid #000;
+   border-bottom:none;
+}
+.mission .right p{
+   font-size:1rem;
+   margin:30px auto;
+   width:80%
+}
+
+
+
+/* media */
+@media(max-width:1200px){
+   .mission .right p{
+      font-size:.8rem;
+      margin:20px auto;
+   }
+   .about .left p{
+      font-size:.8rem;
+      margin:20px auto;
+   }
+}
+
+
+@media(max-width:992px){
+   .about .left{
+   width:100%; 
+}
+   .about .right{
+   width:100%; 
+}
+      .mission .left{
+   width:100%; 
+}
+   .mission .right{
+   width:100%; 
+}
+   .team .card{ 
+   width:40%;
+}   
+}
+
+@media(max-width:768px){
+      .team .card{ 
+   width:100%;
+} 
+   nav{
+      height:80px;
+   }
+}
+
+.container h1 {
+   font-size: 50px;
+}
+.display_text{
+   font-family: 'Roboto', sans-serif;
+   font-weight:bold;
+   font-size: 40px;
+   margin-top: 30px;
+   line-height: 100%;
+   margin-right: 20%;
+
+}  
+h4{
+   margin-right: 20%;
+}

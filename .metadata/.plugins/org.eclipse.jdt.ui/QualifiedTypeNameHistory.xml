@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.springframework.boot.CommandLineRunner"/>
+    <fullyQualifiedTypeName name="com.project.openlibrary.repository.UserRepository"/>
+    <fullyQualifiedTypeName name="com.project.openlibrary.repository.RoleRepository"/>
+    <fullyQualifiedTypeName name="com.project.openlibrary.helper.UserFoundException"/>
+    <fullyQualifiedTypeName name="com.project.openlibrary.entity.Quiz"/>
+    <fullyQualifiedTypeName name="com.project.openlibrary.service.impl.UserDetailsServiceImpl"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServletRequest"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServletResponse"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.ServletException"/>
+    <fullyQualifiedTypeName name="io.jsonwebtoken.ExpiredJwtException"/>
+    <fullyQualifiedTypeName name="com.project.openlibrary.entity.Category"/>
+    <fullyQualifiedTypeName name="com.project.openlibrary.entity.Question"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.FilterChain"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.project.openlibrary.service.UserService"/>
+    <fullyQualifiedTypeName name="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+    <fullyQualifiedTypeName name="com.project.openlibrary.entity.Role"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="com.project.openlibrary.entity.UserRole"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="com.project.openlibrary.entity.User"/>
+</qualifiedTypeNameHistroy>

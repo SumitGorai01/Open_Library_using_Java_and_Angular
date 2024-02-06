@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+mat-icon{
+font-size: 1em; 
+
+}
+.logo{
+ 
+font-family: 'Roboto', sans-serif;
+font-weight: bold;
+font-size:35px;
+margin-left: 20px;
+}
+
+span #p{   
+color: #3489eb;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.nav{
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.nav:hover{
+background-color: #3489eb;
+}
+.book:hover{
+background-color: #3489eb;
+}
+
+.imagelogo{
+    width: 35px;
+    height: 35px;
+    border-radius: 20%;
+   
+}

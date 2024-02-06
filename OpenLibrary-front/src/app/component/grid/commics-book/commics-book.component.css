@@ -1,0 +1,92 @@
+:root{
+    --main-color:#d3ad7f;
+    --black:#111110;
+    --bg:#120b06;
+    --border:.1rem solid rgba(255,255,255,.3);
+}
+
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+section{
+    padding:2rem 7%;
+}
+
+.heading{
+    text-align: center;
+    color:#fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 2rem;
+}
+
+.heading span{
+    color:var(--main-color);
+    text-transform: uppercase;
+}
+
+
+.button{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.6rem 2rem;
+    font-size: 1rem;
+    color:#fff;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.button:hover{
+    letter-spacing:0 rem;
+}
+
+
+.blogs .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap:1.0rem; 
+}
+
+.blogs .box-container .box{
+    border:var(--border);   
+    background-color:white; 
+}
+
+.blogs .box-container .box .image{
+    height: 20rem;
+    overflow:hidden;
+    width: 100%;
+}
+
+.blogs .box-container .box .image img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.blogs .box-container .box:hover .image img{
+    transform: scale(1.2);
+}
+
+.blogs .box-container .box .content{
+    padding:1.2rem;
+     color:#fff;
+}
+.blogs .box-container .box .content p{
+   
+     color:#1E2A29;
+}
+
+.blogs .box-container .box .content .title{
+    font-size: 1rem;
+    line-height: 1;
+    color:#fff;
+}

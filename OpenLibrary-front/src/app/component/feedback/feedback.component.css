@@ -1,0 +1,17 @@
+.container{
+    max-width: 50%;
+  } 
+  button{
+    background-color:#90bed7;
+    color: white;
+    border: none;
+  }
+  button:hover{
+    background-color: white;
+    color: black;
+   transform: scale(1.1);
+  }
+  
+  .form-label{
+    text-align: start;
+  }
