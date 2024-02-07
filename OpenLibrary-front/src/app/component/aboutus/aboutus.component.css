@@ -29,8 +29,8 @@ body{
    display:inline-block;
 }
 .about .right img{
-   padding-top: 2%;
-   width:65%;  
+   /* padding-top: 2%; */
+   width:80%;  
    
 }
 
@@ -131,18 +131,3 @@ body{
    }
 }
 
-.container h1 {
-   font-size: 50px;
-}
-.display_text{
-   font-family: 'Roboto', sans-serif;
-   font-weight:bold;
-   font-size: 40px;
-   margin-top: 30px;
-   line-height: 100%;
-   margin-right: 20%;
-
-}  
-h4{
-   margin-right: 20%;
-}

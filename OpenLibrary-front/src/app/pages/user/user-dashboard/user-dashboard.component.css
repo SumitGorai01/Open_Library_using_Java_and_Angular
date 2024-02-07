@@ -1,13 +1,2 @@
 
 
-body {
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  height: 100vh; /* Set height to 100% of the viewport height */
-  overflow: hidden; /* Optional: Prevent vertical scrollbar if not needed */
-}
-.container {
-    margin: 0;
-    padding: 0;
-    height: 100vh; /* Set the body to full height of the viewport */
-  }

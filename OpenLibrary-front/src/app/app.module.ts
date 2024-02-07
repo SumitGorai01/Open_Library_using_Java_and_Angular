@@ -39,6 +39,7 @@ import { CommicsBookComponent } from './component/grid/commics-book/commics-book
 import { ComputerBookComponent } from './component/grid/computer-book/computer-book.component';
 import { HistoryBookComponent } from './component/grid/history-book/history-book.component';
 import { FeedbackComponent } from './component/feedback/feedback.component';
+import { FaqComponent } from './component/faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { FeedbackComponent } from './component/feedback/feedback.component';
     CommicsBookComponent,
     ComputerBookComponent,
     HistoryBookComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,

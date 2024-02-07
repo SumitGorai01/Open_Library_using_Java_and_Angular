@@ -1,7 +1,36 @@
-
-.full-width{
-    width: 100%;
+.container{
+	display: flex;
+	justify-content: center;
+	flex-direction:column;
+	background-color: #90bde7;
+	padding: 2%;
+	
 }
-mat-card{
-    background-color: #EEF4ED;
+a{
+   text-decoration: none;
+	
+}
+
+img{
+   width:45%;
+   height:90%;
+   border-radius:4%;
+	
+}
+
+#form-div{
+   width:50%;
+}
+button{
+align-items: center;
+	width: 100%;
+   background-color:white;
+}
+button:hover{
+background-color:#3489ed;
+color:white;
+}
+
+#emailHelp{
+color: white;
 }

@@ -1,4 +1,4 @@
-<div class="container mt-3 mb-3">
+<div class="container mt-3 mb-3" *ngIf="isLoggedIn && login.getUserRole()=='USER'">
     <h2 class="border border-light">Give Your Valuable feedback</h2>
     <form action="">
     <div class="mb-3">

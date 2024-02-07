@@ -1,8 +1,8 @@
-.col img{
-    width:60%;
+/* .col img{
+    width:50%;
     height: auto;
     background-color: #EEF4ED;
-}
+} */
 
 .wlcm{
     font-family: 'Roboto', sans-serif;
@@ -27,18 +27,12 @@
 }
 @media only screen and (max-width: 600px) {
   
-    
-.wlcm{    
-    font-size:30px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+
 }
 
-.display_text{
-    font-size: 30px;
-    margin-top: 20px;
-    line-height: 120%;
-    display: flex;
-    }
-
+ .row>* {
+    flex-shrink: 0;
+    width: 50%;
+    max-width: 80%;
+    
 }

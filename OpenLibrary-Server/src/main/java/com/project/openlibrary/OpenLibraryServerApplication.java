@@ -56,7 +56,7 @@ public class OpenLibraryServerApplication implements CommandLineRunner {
 			User user1 = this.userService.createUser(user, userRoleSet);
 			System.out.println(user1.getUsername());
 		} catch (Exception e) {
-			System.out.println("User Already Present....");
+			System.out.println("Admin with this details Already Present....");
 		}
 
 	}
