@@ -16,6 +16,8 @@ import { CommicsBookComponent } from './component/grid/commics-book/commics-book
 import { ComputerBookComponent } from './component/grid/computer-book/computer-book.component';
 import { HistoryBookComponent } from './component/grid/history-book/history-book.component';
 import { VedasBookComponent } from './component/grid/vedas-book/vedas-book.component';
+import { ViewQuizzesComponent } from './pages/admin/view-quizzes/view-quizzes.component';
+import { UpdateQuizComponent } from './pages/admin/update-quiz/update-quiz.component';
 
 
 const routes: Routes = [
@@ -60,11 +62,15 @@ const routes: Routes = [
       {
         path: 'add-category',
         component: AddCategoryComponent,
-      }
-      //       {
-      //         path:'quizzes',
-      //         component: QuizzesComponent,
-      //       },
+      },
+      {
+        path: 'quizzes',
+        component: ViewQuizzesComponent,
+      },
+      {
+        path:'quiz/:quizId',
+        component:UpdateQuizComponent,
+      },
     ],
   },
   {
@@ -85,25 +91,25 @@ const routes: Routes = [
     ]
   },
   {
-    path:'commics-book',
-    component:CommicsBookComponent,
-    pathMatch:'full'
-   },
-   {
-    path:'computer-book',
-    component:ComputerBookComponent,
-    pathMatch:'full',
-   },
-   {
-    path:'history-book',
-    component:HistoryBookComponent,
-    pathMatch:'full',
-   },
-   {
-    path:'vedas-books',
-    component:VedasBookComponent,
-    pathMatch:'full'
-   }
+    path: 'commics-book',
+    component: CommicsBookComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'computer-book',
+    component: ComputerBookComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: 'history-book',
+    component: HistoryBookComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: 'vedas-books',
+    component: VedasBookComponent,
+    pathMatch: 'full'
+  }
 
 ];
 

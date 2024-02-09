@@ -5,7 +5,7 @@
 .faq-section {
     background: #fdfdfd;
     min-height: 50vh;
-    padding: 5vh;
+    padding: 1vh;
 }
 
 .faq-title h2 {
@@ -114,6 +114,6 @@
 .row > * {
     flex-shrink: 0;
     width: 100%;
-    max-width: 50%;
+    max-width:100%;
     margin-right: 2rem;
 }

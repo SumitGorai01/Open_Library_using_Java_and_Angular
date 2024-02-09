@@ -2,8 +2,12 @@ package com.project.openlibrary.entity;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -23,7 +27,9 @@ public class Author {
 	private String authorName;
 	
 	// Define One-to-Many relationship with Book
-    @OneToMany(mappedBy = "author")
+//    @OneToMany(mappedBy = "author")
+	@OneToMany(mappedBy = "author" ,fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+	@JsonIgnore
     private List<Book> books;
 
 	public Author(Integer authorId, String authorName, List<Book> books) {
@@ -67,7 +73,6 @@ public class Author {
 	public void setBooks(List<Book> books) {
 		this.books = books;
 	}
-	
 	
 
 

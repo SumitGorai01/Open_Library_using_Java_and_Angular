@@ -40,6 +40,11 @@ import { ComputerBookComponent } from './component/grid/computer-book/computer-b
 import { HistoryBookComponent } from './component/grid/history-book/history-book.component';
 import { FeedbackComponent } from './component/feedback/feedback.component';
 import { FaqComponent } from './component/faq/faq.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { ViewQuizzesComponent } from './pages/admin/view-quizzes/view-quizzes.component';
+import { UpdateQuizComponent } from './pages/admin/update-quiz/update-quiz.component';
+
 
 @NgModule({
   declarations: [
@@ -64,7 +69,9 @@ import { FaqComponent } from './component/faq/faq.component';
     ComputerBookComponent,
     HistoryBookComponent,
     FeedbackComponent,
-    FaqComponent
+    FaqComponent,
+    ViewQuizzesComponent,
+    UpdateQuizComponent
   ],
   imports: [
     BrowserModule,
@@ -82,6 +89,8 @@ import { FaqComponent } from './component/faq/faq.component';
     MatListModule,
     MatSlideToggleModule,
     MatSelectModule,
+    MatExpansionModule,
+    MatSidenavModule,
   ],
   providers: [
     provideClientHydration(),
@@ -89,7 +98,9 @@ import { FaqComponent } from './component/faq/faq.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+}
 
 // run this command to create angular app
 // ng new exam-front --no-standalone

@@ -1,7 +1,7 @@
 package com.project.openlibrary.service.impl;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,31 +17,29 @@ public class BookServiceImpl implements BookService {
 	private BookRepository bookRepository;
 
 	@Override
-	public List<Book> getAllBookRecords() {
-		
-		return bookRepository.findAll();
+	public Book addBook(Book book) {		
+		return this.bookRepository.save(book);
 	}
 
 	@Override
-	public void saveBookRecord(Book book) {
-		this.bookRepository.save(book);
-		
+	public Book updateBook(Book book) {
+		return this.bookRepository.save(book);
 	}
 
 	@Override
-	public Book getBookById(Integer bookId) {
-		Optional<Book> optional=bookRepository.findById(bookId);
-		Book book=null;
-		if(optional.isPresent()) {
-			book=optional.get();
-		}else {
-			throw new RuntimeException("Book not foudn by id"+bookId);
-		}
-		return book;
+	public Set<Book> getAllBooks() {
+		return new LinkedHashSet<>(this.bookRepository.findAll());
 	}
 
 	@Override
-	public void deleteBookbyId(Integer bookId) {
+	public Book getBook(Integer bookId) {
+		return this.bookRepository.findById(bookId).get();
+	}
+
+	@Override
+	public void deleteBook(Integer bookId) {
+		Book book =new Book();
+		book.setBookId(bookId);
 		this.bookRepository.deleteById(bookId);
 		
 	}

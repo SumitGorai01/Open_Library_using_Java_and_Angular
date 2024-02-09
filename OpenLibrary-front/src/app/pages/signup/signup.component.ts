@@ -85,6 +85,12 @@ export class SignupComponent implements OnInit{
      //addUser : userservice
   this.userService.addUser(this.user).subscribe(
     (data : any)=>{
+      this.user.username='';
+      this.user.password='';
+      this.user.name='';
+      this.user.email='';
+      this.user.phone='';
+
       //success
       console.log(data);
       // alert('Success');

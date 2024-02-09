@@ -4,6 +4,7 @@ import java.sql.Date;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -22,10 +23,7 @@ public class Book {
 	
 	@Column(name="book_name",unique = true, nullable = false)
 	private String bookName;
-	
-//	@Column(name="author_id", nullable = false)
-//	private Integer authorId;
-	
+		
 	@Column(name="publish_date")
 	private Date publishDate;
 	
@@ -34,8 +32,10 @@ public class Book {
 	private String bookPdf;
 
 	// Define Many-to-One relationship with Author
-    @ManyToOne
-    @JoinColumn(name = "author_id", nullable = false)
+//    @ManyToOne
+//    @JoinColumn(name = "author_id", nullable = false)
+	
+	@ManyToOne(fetch = FetchType.EAGER)
     private Author author;
 	
 	public String getImage() {
