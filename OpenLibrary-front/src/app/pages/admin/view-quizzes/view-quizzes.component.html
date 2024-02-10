@@ -13,7 +13,8 @@
     </mat-card-content>
 
     <mat-card-actions>
-        <button mat-flat-button color="primary">Questions</button>
+        <button [routerLink]="'/admin/view-question/' + q.quizId + '/' +q.title" mat-flat-button
+            color="primary">Questions</button>
 
         <button mat-stroked-button color="primary" class="ml20">Max marks : {{q.maxMarks}}</button>
 

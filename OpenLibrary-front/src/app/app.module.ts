@@ -44,6 +44,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { ViewQuizzesComponent } from './pages/admin/view-quizzes/view-quizzes.component';
 import { UpdateQuizComponent } from './pages/admin/update-quiz/update-quiz.component';
+import { ViewQuizQuestionsComponent } from './pages/admin/view-quiz-questions/view-quiz-questions.component';
+import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
 
 
 @NgModule({
@@ -71,7 +73,9 @@ import { UpdateQuizComponent } from './pages/admin/update-quiz/update-quiz.compo
     FeedbackComponent,
     FaqComponent,
     ViewQuizzesComponent,
-    UpdateQuizComponent
+    UpdateQuizComponent,
+    ViewQuizQuestionsComponent,
+    AddQuestionComponent
   ],
   imports: [
     BrowserModule,
