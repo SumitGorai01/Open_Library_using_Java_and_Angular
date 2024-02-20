@@ -6,4 +6,26 @@ body {
 
 .card-header {
 	background-color: #1B3358;
-}
+} 
+
+ /* Default styles for the image */
+.img {
+	width: 100%; /* Image takes full width of its container */
+	height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Media query for devices with a maximum width of 768px (tablets) */
+  @media (max-width: 768px) {
+	.img {
+	  /* Adjust width and height as needed for smaller screens */
+	  width: 80%; /* Example: Image takes 80% of container width */
+	}
+  }
+  
+  /* Media query for devices with a maximum width of 480px (phones) */
+  @media (max-width: 480px) {
+	.img {
+	  /* Further adjustments for smaller screens */
+	  width: 90%; /* Example: Image takes 90% of container width */
+	}
+  }

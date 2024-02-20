@@ -1,6 +1,3 @@
-<!-- <p>navbar works!</p> -->
-
-
 <mat-toolbar color="#EEF4ED">
   <a routerLink="/" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
     <img class="imagelogo" src="../../../assets/images/blacklogo.gif" alt="">
@@ -31,18 +28,18 @@
     Register
   </a>
 
-  <button routerLink="/admin/profile" *ngIf="isLoggedIn && login.getUserRole()=='ADMIN'" mat-button class="example-icon mr20 nav">
-     Admin : {{login.getUser().username}} </button>
+  <button routerLink="/admin/profile" *ngIf="isLoggedIn && login.getUserRole()=='ADMIN'" mat-button
+    class="example-icon mr20 nav">
+    Admin : {{login.getUser().username}} </button>
 
-  <button routerLink="/user-dashboard/profile" *ngIf="isLoggedIn && login.getUserRole()=='USER'" mat-button class="example-icon mr20 nav">
-      {{login.getUser().username}} </button>
+  <button routerLink="/user-dashboard/profile" *ngIf="isLoggedIn && login.getUserRole()=='USER'" mat-button
+    class="example-icon mr20 nav">
+    {{login.getUser().username}} </button>
 
   <button (click)="logout()" *ngIf="isLoggedIn" mat-button class="example-icon mr20 ml20 nav"
     aria-label="Example icon-button with share icon"> Logout
     <mat-icon>logout</mat-icon>
   </button>
 
-  
+
 </mat-toolbar>
-
-

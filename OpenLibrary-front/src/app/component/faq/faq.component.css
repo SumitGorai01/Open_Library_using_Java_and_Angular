@@ -1,6 +1,3 @@
-
-/* faq css */
-
 /* css for faq */
 .faq-section {
     background: #fdfdfd;
@@ -104,6 +101,7 @@
     .faq {
         margin-bottom: 10px;
     }
+
     .faq .card .card-header .faq-title {
         line-height: 26px;
         margin-top: 5px;
@@ -111,9 +109,9 @@
 }
 
 /* css for faq */
-.row > * {
+.row>* {
     flex-shrink: 0;
     width: 100%;
-    max-width:100%;
+    max-width: 100%;
     margin-right: 2rem;
 }
