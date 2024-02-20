@@ -1,31 +1,40 @@
-
 <mat-card>
-    <mat-action-list class="sidebar">
-        <div mat-subheader > <mat-icon mat-list-icon class="mat-icon">menu_icon</mat-icon>  Menu</div>
-            <button mat-list-item routerLink="/admin" class="nav">
-                <mat-icon mat-list-icon class="mat-icon">   home</mat-icon>
-                 Home
-            </button>
-            <button mat-list-item routerLink="/admin/profile" class="nav">
-                <mat-icon mat-list-icon>account_circle</mat-icon>   Profile
-            </button>
-            <button mat-list-item routerLink="/admin/categories" class="nav">
-                <mat-icon mat-list-icon>category</mat-icon>   Categories
-            </button>
-            <button mat-list-item routerLink="/admin/add-category" class="nav">
-                <mat-icon mat-list-icon>queue</mat-icon>   Add Categories
-            </button>
-            <button mat-list-item routerLink="/admin/quizzes" class="nav">
-                <mat-icon mat-list-icon>quiz</mat-icon>   Quizzes
-            </button>
-            <button mat-list-item routerLink="/admin/add-quiz" class="nav">
-                <mat-icon mat-list-icon>add</mat-icon>   Add Quizzes
-            </button>
-            <button (click)="logout()"
-            *ngIf="isLoggedIn" mat-list-item class="nav">
-                <mat-icon mat-list-icon>logout</mat-icon>  Logout
-            </button>
-           
-        
+    <mat-action-list class="sidebar ">
+        <div mat-subheader>
+            <h1 class="text-center">Features</h1>
+            <hr>
+        </div>
+
+        <button mat-list-item routerLink="/admin" class="nav">
+            <span><mat-icon mat-list-icon class="mat-icon"> home </mat-icon>
+                Home</span>
+            <hr>
+        </button>
+
+        <button mat-list-item routerLink="/admin/profile" class="nav">
+            <span><mat-icon mat-list-icon>account_circle</mat-icon> Your Profile</span>
+            <hr>
+        </button>
+        <button mat-list-item routerLink="/admin/categories" class="nav">
+            <span><mat-icon mat-list-icon>category</mat-icon> Categories</span>
+            <hr>
+        </button>
+        <button mat-list-item routerLink="/admin/add-category" class="nav">
+            <span><mat-icon mat-list-icon>queue</mat-icon> Add Categories</span>
+            <hr>
+        </button>
+        <button mat-list-item routerLink="/admin/quizzes" class="nav">
+            <span><mat-icon mat-list-icon>quiz</mat-icon> Quizzes </span>
+            <hr>
+        </button>
+        <button mat-list-item routerLink="/admin/add-quiz" class="nav">
+            <span><mat-icon mat-list-icon>add</mat-icon> Add Quizzes </span>
+            <hr>
+        </button>
+        <button (click)="logout()" *ngIf="isLoggedIn" mat-list-item class="nav">
+            <span> <mat-icon mat-list-icon>logout</mat-icon> Logout </span>
+        </button>
+
+
     </mat-action-list>
 </mat-card>

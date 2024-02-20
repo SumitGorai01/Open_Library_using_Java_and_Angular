@@ -1,6 +1,5 @@
-/* about
- */
- .container h1 {
+/* about */
+.container h1 {
    font-size: 50px;
 }
 
@@ -32,7 +31,7 @@
    width: 40%;
    border-top: 2px solid #000;
    border-bottom: none;
-   margin-left: 30%;    
+   margin-left: 30%;
 }
 
 .about .left p {
@@ -80,29 +79,31 @@
 
 /* media */
 @media (max-width: 1200px) {
+
    .mission .right p,
    .about .left p {
-       font-size: 0.8rem;
-       margin: 20px auto;
+      font-size: 0.8rem;
+      margin: 20px auto;
    }
 }
 
 @media (max-width: 992px) {
+
    .about .left,
    .about .right,
    .mission .left,
    .mission .right {
-       width: 100%;
+      width: 100%;
    }
 
    .team .card {
-       width: 40%;
+      width: 40%;
    }
 }
 
 @media (max-width: 768px) {
    .team .card {
-       width: 100%;
+      width: 100%;
    }
 
    /* nav {

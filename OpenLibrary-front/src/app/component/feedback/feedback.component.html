@@ -1,16 +1,17 @@
 <div class="container mt-3 mb-3" *ngIf="isLoggedIn && login.getUserRole()=='USER'">
-    <h2 class="border border-light">Give Your Valuable feedback</h2>
-    <form action="">
+  <h2 class="border border-light">Give Your Valuable feedback</h2>
+  <form action="">
     <div class="mb-3">
-        <label for="email" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="email" placeholder="name@example.com">
-      </div>
-      <div class="mb-3">
-        <label for="feedback" class="form-label">Feedback </label>
-        <textarea class="form-control" id="f_area" rows="2"  placeholder="write your feedback..."></textarea>
-      </div>
-      <div>
-        <button type="button" class="btn btn-primary">Submit</button>
-      </div>
-    </form>
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email" placeholder="name@example.com">
+    </div>
+    <div class="mb-3">
+      <label for="feedback" class="form-label">Feedback </label>
+      <textarea class="form-control" id="f_area" rows="2" placeholder="write your feedback..."></textarea>
+    </div>
+    <div>
+      <button type="button" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+  <hr>
 </div>
