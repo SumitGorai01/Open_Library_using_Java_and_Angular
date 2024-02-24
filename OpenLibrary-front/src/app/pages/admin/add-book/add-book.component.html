@@ -1,0 +1,61 @@
+<mat-card>
+    <div class="mt20 ml20">
+        <h1>Add New Book</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-mt-2">
+                <form (ngSubmit)="addBook()">
+
+                    <!-- title -->
+                    <mat-form-field class="full-width w100">
+                        <mat-label>Enter Book Name</mat-label>
+                        <input [(ngModel)]="bookData.bookName" type="text" name="bookName" placeholder="Enter here" matInput
+                            required="">
+                    </mat-form-field>
+
+                    <!-- publish date -->                      
+                    <mat-form-field class="w100">
+                        <mat-label>Enter Publish Date</mat-label>
+                        <input [(ngModel)]="bookData.publishDate" type="date" name="publishDate"  matInput
+                            required="">
+                    </mat-form-field>
+
+                    <!-- image -->                      
+                    <mat-form-field class="w100">
+                        <mat-label>Enter Image</mat-label>
+                        <input [(ngModel)]="bookData.image" type="text" name="image"  matInput
+                            required="">
+                    </mat-form-field>
+
+                    <!-- publish date -->                      
+                    <mat-form-field class="w100">
+                        <mat-label>Enter Book PDF </mat-label>
+                        <input [(ngModel)]="bookData.bookPdf" type="text" name="bookPdf"  matInput
+                            required="">
+                    </mat-form-field>
+
+                    <!-- select authors -->
+                    <!-- <h4>Select author</h4> -->
+                    <mat-form-field class="w100">
+                        <mat-label>Select author</mat-label>
+                        <mat-select [(ngModel)]="bookData.author.authorId" name="author">
+                            <mat-option *ngFor="let a of authors" [value]="a.authorId"> {{a.authorName}} </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+
+                    <!-- add button -->
+                    <div class="text-center">
+                        <button type="submit" mat-raised-button color="primary">Save
+                            <mat-icon> save</mat-icon></button>
+                    </div>
+                    <br><br>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</mat-card>
+<br><br>
+<!-- {{quizData | json}} -->

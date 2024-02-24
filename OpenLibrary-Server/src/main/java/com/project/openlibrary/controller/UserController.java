@@ -75,7 +75,7 @@ public class UserController {
 
 	// update user
 
-	// get all categories
+	// get all USERS
 	@GetMapping("/")
 	public ResponseEntity<?> getAllUsers() {
 		return ResponseEntity.ok(this.userService.getAllUsers());

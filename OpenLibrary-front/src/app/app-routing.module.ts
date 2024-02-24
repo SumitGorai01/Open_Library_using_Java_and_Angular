@@ -19,6 +19,11 @@ import { VedasBookComponent } from './component/grid/vedas-book/vedas-book.compo
 import { ViewQuizzesComponent } from './pages/admin/view-quizzes/view-quizzes.component';
 import { UpdateQuizComponent } from './pages/admin/update-quiz/update-quiz.component';
 import { ViewQuizQuestionsComponent } from './pages/admin/view-quiz-questions/view-quiz-questions.component';
+import { ViewUsersComponent } from './pages/admin/view-users/view-users.component';
+import { ViewBooksComponent } from './pages/admin/view-books/view-books.component';
+import { ViewAuthorsComponent } from './pages/admin/view-authors/view-authors.component';
+import { UpdateBookComponent } from './update-book/update-book.component';
+import { AddBookComponent } from './pages/admin/add-book/add-book.component';
 
 
 const routes: Routes = [
@@ -75,6 +80,26 @@ const routes: Routes = [
       {
         path:'view-question/:quizId/:title',
         component:ViewQuizQuestionsComponent
+      },
+      {
+        path: 'view-users',
+        component : ViewUsersComponent
+      },
+      {
+        path: 'view-books',
+        component : ViewBooksComponent
+      },
+      {
+        path : 'add-book',
+        component : AddBookComponent
+      },
+      {
+        path : 'book/:bookId',
+        component : UpdateBookComponent
+      },
+      {
+        path: 'view-authors',
+        component : ViewAuthorsComponent
       }
     ],
   },
