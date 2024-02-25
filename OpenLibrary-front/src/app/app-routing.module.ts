@@ -22,8 +22,9 @@ import { ViewQuizQuestionsComponent } from './pages/admin/view-quiz-questions/vi
 import { ViewUsersComponent } from './pages/admin/view-users/view-users.component';
 import { ViewBooksComponent } from './pages/admin/view-books/view-books.component';
 import { ViewAuthorsComponent } from './pages/admin/view-authors/view-authors.component';
-import { UpdateBookComponent } from './update-book/update-book.component';
+import { UpdateBookComponent } from './pages/admin/update-book/update-book.component';
 import { AddBookComponent } from './pages/admin/add-book/add-book.component';
+import { AddAuthorComponent } from './pages/admin/add-author/add-author.component';
 
 
 const routes: Routes = [
@@ -100,7 +101,12 @@ const routes: Routes = [
       {
         path: 'view-authors',
         component : ViewAuthorsComponent
-      }
+      },
+      {
+        path : 'add-author',
+        component : AddAuthorComponent
+      },
+      
     ],
   },
   {
@@ -109,15 +115,10 @@ const routes: Routes = [
     canActivate: [NormalGuard],
 
     children: [
-      // {
-      //   path: '',
-      //   component: WelcomeComponent,
-      // },
       {
         path: 'profile',
         component: ProfileComponent,
       },
-
     ]
   },
   {

@@ -53,7 +53,7 @@ export class ViewAuthorsComponent implements OnInit {
             Swal.fire({
               position: "center",
               icon: "success",
-              title: "User Deleted Successfully !!",
+              title: "Author Deleted Successfully !!",
               // showConfirmButton: false,
               timer: 2000
             });

@@ -11,7 +11,6 @@ export class ViewBooksComponent implements OnInit{
 
   constructor (private _book:BookService){}
 
-
   books = [
     {
       bookId : '',

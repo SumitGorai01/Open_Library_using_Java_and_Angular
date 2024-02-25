@@ -49,8 +49,10 @@ import { AddQuestionComponent } from './pages/admin/add-question/add-question.co
 import { ViewUsersComponent } from './pages/admin/view-users/view-users.component';
 import { ViewBooksComponent } from './pages/admin/view-books/view-books.component';
 import { ViewAuthorsComponent } from './pages/admin/view-authors/view-authors.component';
-import { UpdateBookComponent } from './update-book/update-book.component';
+import { UpdateBookComponent } from './pages/admin/update-book/update-book.component';
 import { AddBookComponent } from './pages/admin/add-book/add-book.component';
+import { AddAuthorComponent } from './pages/admin/add-author/add-author.component';
+import { UpdateUserComponent } from './pages/update-user/update-user.component';
 
 @NgModule({
   declarations: [
@@ -84,7 +86,9 @@ import { AddBookComponent } from './pages/admin/add-book/add-book.component';
     ViewBooksComponent,
     ViewAuthorsComponent,
     UpdateBookComponent,
-    AddBookComponent
+    AddBookComponent,
+    AddAuthorComponent,
+    UpdateUserComponent
   ],
   imports: [
     BrowserModule,

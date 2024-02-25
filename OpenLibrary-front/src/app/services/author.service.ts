@@ -9,10 +9,10 @@ export class AuthorService {
 
   constructor(private _http: HttpClient) {  }
 
- //add user
-//  public addUser(user:any){
-//      return this.http.post(`${baseUrl}/user/`,user);
-//  }
+ //add author
+ public addAuthor(author:any){
+     return this._http.post(`${baseUrl}/author/`,author);
+ }
 
   //load authors
   public authors() {
@@ -25,6 +25,6 @@ export class AuthorService {
  }
  //delete user
  public deleteAuthor(authorId : any){
-   return this._http.delete(`${baseUrl}book/${authorId}`)
+   return this._http.delete(`${baseUrl}/author/${authorId}`)
  }
 }

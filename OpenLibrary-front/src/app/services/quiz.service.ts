@@ -10,6 +10,7 @@ export class QuizService {
 
   constructor(private  _http:HttpClient) { }
 
+  //get all quizzes
   public quizzes(){
     return this._http.get(`${baseUrl}/quiz/`);
   }

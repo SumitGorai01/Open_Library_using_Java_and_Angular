@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../../services/user.service';
 import Swal from 'sweetalert2';
+import { LoginService } from '../../../services/login.service';
 
 @Component({
   selector: 'app-view-users',
@@ -18,11 +19,13 @@ export class ViewUsersComponent implements OnInit {
       email: '',
       phone: '',
       profile: '',
-      userRoles: ''
+      authorities:[{
+        authority:''
+      } ]
     },
   ]
 
-  constructor(private _user: UserService) { }
+  constructor(private _user: UserService, private login :LoginService) { }
 
   ngOnInit(): void {
     this._user.showAllUsers().subscribe(

@@ -852,3 +852,25 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.apache.to
 2024-02-24 18:03:32,915 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2024-02-24 18:03:32,956 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2024-02-24 18:03:32,965 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2024-02-24 20:24:53,460 [Worker-48: Launching OpenLibrary-Server - OpenLibraryServerApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-02-24 20:24:53,690 [Worker-48: Launching OpenLibrary-Server - OpenLibraryServerApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-02-24 20:24:53,696 [Worker-48: Launching OpenLibrary-Server - OpenLibraryServerApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2024-02-24 23:32:24,420 [Stop Help Server] INFO  org.eclipse.jetty.server.Server - Stopped oejs.Server@214d6fea{STOPPING}[12.0.3,sto=0]
+2024-02-24 23:32:24,452 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@35504fea{HTTP/1.1, (http/1.1)}{127.0.0.1:0}
+2024-02-25 09:43:50,854 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-02-25 12:23:26,560 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-02-25 12:23:28,857 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2024-02-25 12:35:57,364 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-02-25 12:35:57,662 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-02-25 12:35:57,694 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2024-02-25 12:41:16,088 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-02-25 12:41:16,123 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-02-25 12:41:16,130 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2024-02-25 12:41:59,373 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-12.0.3; built: 2023-10-27T03:25:22.284Z; git: a873259fd5af141dedaa6c7fa8fe8fbdedce0d61; jvm 21+35-LTS-2513
+2024-02-25 12:41:59,462 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started oeje8n.ContextHandler$CoreContextHandler@3bd5043{/help,/help,b=null,a=AVAILABLE,h=oeje8n.ContextHandler$CoreContextHandler$CoreToNestedHandler@6df35bdb{STARTED}}
+2024-02-25 12:41:59,467 [Start Help Server] INFO  o.e.j.s.DefaultSessionIdManager - Session workerName=node0
+2024-02-25 12:41:59,510 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@6f5199ea{HTTP/1.1, (http/1.1)}{127.0.0.1:63569}
+2024-02-25 12:41:59,545 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started oejs.Server@69dbf527{STARTING}[12.0.3,sto=0] @1135644ms
+2024-02-25 12:55:17,136 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-02-25 12:55:17,310 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-02-25 12:55:17,313 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes

@@ -17,19 +17,16 @@
                     <td>{{a.authorId }}</td>
                     <td>{{ a.authorName }}</td>
                     <td>{{ a.books }}</td>
-                    <td><button mat-flat-button color="warn"  (click)="deleteAuthor(a.authorId)">Delete</button>
-                    <button mat-flat-button color="primary" class="ml20" (click)="deleteAuthor(a.authorId)">Update</button></td>
-
+                    <td><button mat-flat-button color="warn" (click)="deleteAuthor(a.authorId)">Delete</button>
+                        <button mat-flat-button color="primary" class="ml20">Update</button>
+                    </td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-    
-<div class="container text-center mt20 mb20">
-
-    <button routerLink="/admin/add-author" mat-raised-button color="primary">Add New Author</button>
-
-</div>
+    <div class="container text-center mt20 mb20">
+        <button routerLink="/admin/add-author" mat-raised-button color="primary">Add New Author</button>
+    </div>
 
 </mat-card>

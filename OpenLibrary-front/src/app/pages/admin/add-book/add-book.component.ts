@@ -11,7 +11,7 @@ import { BookService } from '../../../services/book.service';
 })
 
 export class AddBookComponent implements OnInit {
-  // [x: string]: any;
+  [x: string]: any;
 
   authors = [
     {
@@ -22,14 +22,13 @@ export class AddBookComponent implements OnInit {
 
   bookData = {
     bookName: '',
-    publishDate : '',
+    publishDate: '',
     image: '',
     bookPdf: '',
     author: {
       authorId: '',
-      authorName : ''
+      authorName: ''
     },
-
   }
 
   constructor(private _author: AuthorService, private _snack: MatSnackBar, private _book: BookService) { }
@@ -47,10 +46,10 @@ export class AddBookComponent implements OnInit {
       }
     );
   }
-  
+
   //add-quiz form data
   addBook() {
-    if (this.bookData.bookName.trim() == '' || this.bookData.bookName == null) {
+    if (this.bookData.bookName == '' || this.bookData.bookName == null) {
       this._snack.open("Book Name is required !! ", "ok", {
         duration: 3000
       })
@@ -80,7 +79,7 @@ export class AddBookComponent implements OnInit {
 
     //call serve
     this._book.addBook(this.bookData).subscribe(
-      (data :any) => {
+      (data: any) => {
         this.bookData.bookName = '';
         this.bookData.publishDate = '';
         this.bookData.image = '';
@@ -106,7 +105,6 @@ export class AddBookComponent implements OnInit {
           icon: "error",
           title: "Oops...Something went wrong!!",
           text: " Please try again !!",
-          // footer: '<a href="#">Why do I have this issue?</a>'
         });
         this._snack.open("Something went wrong  !! Try Again !", 'ok', {
           duration: 3000
@@ -116,5 +114,5 @@ export class AddBookComponent implements OnInit {
   }
 
 
-  
+
 }

@@ -7,26 +7,29 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BookService {
 
-  constructor(private _http: HttpClient) {
+  constructor(private _http: HttpClient) {}
+
+  //add book
+  public addBook(book: any) {
+    return this._http.post(`${baseUrl}/book/`, book);
   }
 
- //add user
- public addBook(book:any){
-     return this._http.post(`${baseUrl}/book/`,book);
- }
+  //show all books
+  public showAllBooks() {
+    return this._http.get(`${baseUrl}/book/`)
+  }
 
- //show all users
- public showAllBooks(){
-   return this._http.get(`${baseUrl}/book/`)
- }
+  //delete book
+  public deleteBook(bookId: any) {
+    return this._http.delete(`${baseUrl}/book/${bookId}`)
+  }
 
- //delete user
- public deleteBook(bookId : any){
-   return this._http.delete(`${baseUrl}/book/${bookId}`)
- }
- 
+  //get the single book
+  public getBook(bookId: any) {
+    return this._http.get(`${baseUrl}/book/${bookId}`);
+  }
   //update 
-  public updateBook(book: any){
-    return this._http.put(`${baseUrl}/book/`,book);
+  public updateBook(book: any) {
+    return this._http.put(`${baseUrl}/book/`, book);
   }
 }
