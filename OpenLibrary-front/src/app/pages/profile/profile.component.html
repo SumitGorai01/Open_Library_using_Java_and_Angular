@@ -1,50 +1,109 @@
-<mat-card *ngIf="user">
-    <h1 style="margin: 20px;">Your Profile Details</h1>
-    <!-- {{user | json }} -->
-    <mat-card-content>
+<mat-card>
 
-        <div class="bootstrap-wrapper">
-            <div class="container">
-
-                <div class="container text-center">
-
-                    <img src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"
-                        alt="" class="profile-image">
-                    <h1 class="mt20">Name : {{login.getUser().name}} </h1>
+    <div class="container">
+        <div class="row gutters">
+            <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="account-settings">
+                            <div class="user-profile">
+                                <div class="user-avatar">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Maxwell Admin">
+                                </div>
+                                <h2 class="user-name">{{login.getUser().username}}</h2>
+                                <h2 class="user-email">{{login.getUser().email}}</h2>
+                            </div>
+                            <div class="about">
+                                <h3>About</h3>
+                                <p>I'm {{login.getUser().name}}. Full Stack Designer I enjoy creating user-centric,
+                                    delightful and human
+                                    experiences.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="row gutters">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <h1 class="mb-2 text-primary">Personal Details</h1>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 ">
+                                <div class="form-group">
+                                    <label for="fullName">User ID</label>
+                                    <input type="text" class="form-control" id="fullName"
+                                        placeholder="{{login.getUser().userId}}" readonly>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 ">
+                                <div class="form-group">
+                                    <label for="fullName">User Name</label>
+                                    <input type="text" class="form-control" id="fullName"
+                                        placeholder="{{login.getUser().username}}" readonly>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 ">
+                                <div class="form-group">
+                                    <label for="fullName">Full Name</label>
+                                    <input type="text" class="form-control" id="fullName"
+                                        placeholder="{{login.getUser().name}}" readonly>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="eMail">Email</label>
+                                    <input type="email" class="form-control" id="eMail"
+                                        placeholder="{{login.getUser().email}}" readonly>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input type="text" class="form-control" id="phone"
+                                        placeholder="{{login.getUser().phone}}" readonly>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="phone">Role</label>
+                                    <input type="text" class="form-control" id="phone"
+                                        placeholder="{{login.getUser().authorities[0].authority}}" readonly>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="phone">Status</label>
+                                    <input type="text" class="form-control" id="phone" placeholder="Active " readonly>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="phone">Password</label>
+                                    <input type="text" class="form-control" id="phone"
+                                        placeholder="Not Show for Security" readonly>
+                                </div>
+                            </div>
 
-                <div class="row">
-                    <div class="col-md-10 offset-md-1">
-                        <mat-card>
-                            <table class="table text-center">
-                                <tr>
-                                    <td>Username</td>
-                                    <td>{{login.getUser().username}}</td>
-                                </tr>
-                                <tr>
-                                    <td>User ID</td>
-                                    <td>{{login.getUser().userId}}</td>
-                                </tr>
+                        </div>
+                        <br>
+                        <div class="row gutters">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="text-right text-center ml20">
+                                
+                                    <!-- <button type="button" id="submit" name="submit"
+                                        class="btn btn-secondary mr20">Cancel</button> -->
+                                    
+                                    <!-- <button  mat-flat-button color="primary" class="ml20">Update</button> -->
 
-                                <tr>
-                                    <td>Phone Number</td>
-                                    <td>{{login.getUser().phone}}</td>
-                                </tr>
-                                <tr>
-                                    <td>Status</td>
-                                    <td>{{login.getUser().enabled?"ACTIVE":"NOT ACTIVE"}}</td>
-                                </tr>
-                                <tr>
-                                    <td>Role</td>
-                                    <td>{{login.getUser().authorities[0].authority}}</td>
-                                </tr>
-                            </table>
-                        </mat-card>
+                                </div>
+                            </div>
+                        </div> 
                     </div>
                 </div>
             </div>
         </div>
-    </mat-card-content>
-    <!-- <mat-card-actions class="text-center mt10" id="but">
-    </mat-card-actions> -->
+    </div>
 </mat-card>
+<br>

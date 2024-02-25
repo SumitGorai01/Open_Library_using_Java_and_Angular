@@ -34,7 +34,7 @@
 
   <button routerLink="/user-dashboard/profile" *ngIf="isLoggedIn && login.getUserRole()=='USER'" mat-button
     class="example-icon mr20 nav">
-    {{login.getUser().username}} </button>
+   USER : {{login.getUser().username}} </button>
 
   <button (click)="logout()" *ngIf="isLoggedIn" mat-button class="example-icon mr20 ml20 nav"
     aria-label="Example icon-button with share icon"> Logout
