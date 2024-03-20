@@ -25,6 +25,7 @@ import { ViewAuthorsComponent } from './pages/admin/view-authors/view-authors.co
 import { UpdateBookComponent } from './pages/admin/update-book/update-book.component';
 import { AddBookComponent } from './pages/admin/add-book/add-book.component';
 import { AddAuthorComponent } from './pages/admin/add-author/add-author.component';
+import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
 
 
 const routes: Routes = [
@@ -106,6 +107,10 @@ const routes: Routes = [
         path : 'add-author',
         component : AddAuthorComponent
       },
+      {
+        path:'add-question/:quizId/:title',
+        component:AddQuestionComponent
+      }
       
     ],
   },

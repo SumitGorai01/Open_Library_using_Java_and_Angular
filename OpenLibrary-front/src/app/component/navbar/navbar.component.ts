@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { LoginService } from '../../services/login.service';
 
 @Component({
@@ -10,9 +10,9 @@ export class NavbarComponent implements OnInit {
   
   isLoggedIn = false;
   user=null;
-
   constructor(public login : LoginService){}
-  
+   
+
   ngOnInit(): void {
     this.isLoggedIn=this.login.isLoginIn();
     this.user = this.login.getUser();

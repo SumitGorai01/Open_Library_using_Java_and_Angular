@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { QuestionService } from '../../../services/question.service';
 import { error } from 'console';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-view-quiz-questions',
@@ -13,6 +14,7 @@ export class ViewQuizQuestionsComponent implements OnInit{
   quizId: any;
   qTitle: any;
   questions= [ {
+    quesId:'',
     content:'',
     image:'',
     option1:'',
@@ -43,5 +45,35 @@ export class ViewQuizQuestionsComponent implements OnInit{
       }
     );
   }
+
+//deletequestion
+deleteQuestion(questionId : any){
+  Swal.fire({
+    icon:'info',
+    title:'Are you sure?',
+    confirmButtonText:'Delete',
+    showCancelButton:true,
+}).then((result)=>{
+  if(result.isConfirmed){
+    this._question.deleteQuestion(questionId).subscribe(
+      (data)=>{
+       this.questions= this.questions.filter((question)=>question.quesId != questionId);
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Question Deleted Successfully !!",
+          // showConfirmButton: false,
+          timer: 2000
+        });
+      },
+      (error) => {
+        console.log(error);
+        Swal.fire('Error !!', 'Server Error !!', 'error')
+      }
+    );
+  }
+
+})
+}
 
 }
