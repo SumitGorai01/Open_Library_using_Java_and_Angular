@@ -2,9 +2,12 @@
 .faq-section {
     background: #fdfdfd;
     min-height: 50vh;
-    padding: 1vh;
+    /* padding: 1vh; */
 }
-
+img{
+    height: 70%;
+    width: 90%;
+}
 .faq-title h2 {
     position: relative;
     margin-bottom: 20px;
@@ -65,7 +68,7 @@
     transition: all 0.3s ease 0s;
     cursor: pointer;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .faq .card .card-header .faq-title .badge {

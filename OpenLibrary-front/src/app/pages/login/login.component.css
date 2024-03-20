@@ -13,12 +13,11 @@ a {
 img {
   width: 35%;
   height: 70%;
-  border-radius: 2%;
+  border-radius: 8%;
 
 }
 
 #form-div {
-
   width: 50%;
 }
 
@@ -37,37 +36,42 @@ button:hover {
   color: white;
 }
 
-/* Default styles */
+/* 
 .container {
   padding: 20px;
 }
 
-/* Styles for medium devices and above */
+
 @media (min-width: 768px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
   .col-md-8 {
     max-width: 60%;
-    /* Adjust width of the form container */
   }
 }
 
-/* Styles for large devices and above */
 @media (min-width: 992px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
   .col-lg-6 {
     max-width: 50%;
-    /* Adjust width of the form container */
   }
 }
 
-/* Styles for extra large devices and above */
 @media (min-width: 1200px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
   .col-xl-4 {
     max-width: 33.33%;
-    /* Adjust width of the form container */
   }
 }
 
-/* Styles for all devices */
-/* You can add more specific styles as needed */
 input[type="email"],
 input[type="password"] {
   width: 100%;
@@ -80,4 +84,5 @@ input[type="password"] {
 
 .text-center {
   text-align: center;
-}
+} */
+

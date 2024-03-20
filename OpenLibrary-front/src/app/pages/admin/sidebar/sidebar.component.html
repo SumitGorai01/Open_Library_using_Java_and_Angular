@@ -1,5 +1,6 @@
-<mat-card class="mb20">
-    <mat-action-list class="sidebar ">
+<!-- This will show on large device -->
+<mat-card class="mb20" fxFlexFill fxShow="true" fxHide.lt-md>
+    <mat-action-list class="sidebar">
         <div mat-subheader>
             <h1 class="text-center">Features</h1>
             <hr>
@@ -8,8 +9,8 @@
         <button mat-list-item routerLink="/admin" class="nav">
             <span><mat-icon mat-list-icon class="mat-icon"> home </mat-icon>
                 Home</span>
-            </button>
-            <!-- <hr> -->
+        </button>
+        <!-- <hr> -->
 
         <button mat-list-item routerLink="/admin/profile" class="nav">
             <span><mat-icon mat-list-icon>account_circle</mat-icon> Your Profile</span>
@@ -32,12 +33,10 @@
         </button>
         <!-- <hr> -->
         <div>
-<hr>
+            <hr>
             <button (click)="logout()" *ngIf="isLoggedIn" mat-list-item class="nav">
                 <span> <mat-icon mat-list-icon>logout</mat-icon> Logout </span>
             </button>
         </div>
-
-
     </mat-action-list>
 </mat-card>

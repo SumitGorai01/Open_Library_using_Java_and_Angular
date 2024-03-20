@@ -126,6 +126,21 @@ public class Question {
 	public void setQuiz(Quiz quiz) {
 		this.quiz = quiz;
 	}
+
+
+	public Question(Long quesId, String content, String image, String option1, String option2, String option3,
+			String option4, String answer, Quiz quiz) {
+		super();
+		this.quesId = quesId;
+		this.content = content;
+		this.image = image;
+		this.option1 = option1;
+		this.option2 = option2;
+		this.option3 = option3;
+		this.option4 = option4;
+		this.answer = answer;
+		this.quiz = quiz;
+	}
 	
 	
 }

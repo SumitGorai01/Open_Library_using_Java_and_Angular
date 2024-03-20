@@ -53,7 +53,8 @@ import { UpdateBookComponent } from './pages/admin/update-book/update-book.compo
 import { AddBookComponent } from './pages/admin/add-book/add-book.component';
 import { AddAuthorComponent } from './pages/admin/add-author/add-author.component';
 import { UpdateUserComponent } from './pages/update-user/update-user.component';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 @NgModule({
   declarations: [
     AppComponent,
@@ -88,7 +89,7 @@ import { UpdateUserComponent } from './pages/update-user/update-user.component';
     UpdateBookComponent,
     AddBookComponent,
     AddAuthorComponent,
-    UpdateUserComponent
+    UpdateUserComponent,
   ],
   imports: [
     BrowserModule,
@@ -108,6 +109,8 @@ import { UpdateUserComponent } from './pages/update-user/update-user.component';
     MatSelectModule,
     MatExpansionModule,
     MatSidenavModule,
+    FlexLayoutModule,
+    CKEditorModule,
   ],
   providers: [
     provideClientHydration(),
