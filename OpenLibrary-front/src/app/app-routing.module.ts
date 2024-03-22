@@ -26,6 +26,8 @@ import { UpdateBookComponent } from './pages/admin/update-book/update-book.compo
 import { AddBookComponent } from './pages/admin/add-book/add-book.component';
 import { AddAuthorComponent } from './pages/admin/add-author/add-author.component';
 import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
+import { ExamDashboardComponent } from './pages/user/exam-dashboard/exam-dashboard.component';
+import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
 
 
 const routes: Routes = [
@@ -116,36 +118,50 @@ const routes: Routes = [
   },
   {
     path: 'user-dashboard',
-    component: UserDashboardComponent,
+    component: ExamDashboardComponent,
     canActivate: [NormalGuard],
-
     children: [
+      {
+        path:'',
+        component:UserDashboardComponent,
+      },
       {
         path: 'profile',
         component: ProfileComponent,
       },
+      {
+        path:'load-quiz',
+        component:LoadQuizComponent,
+      },
+      {
+        path:'load-quiz/:catId',
+        component:LoadQuizComponent,
+      }
+      
     ]
   },
-  {
-    path: 'commics-book',
-    component: CommicsBookComponent,
-    pathMatch: 'full'
-  },
-  {
-    path: 'computer-book',
-    component: ComputerBookComponent,
-    pathMatch: 'full',
-  },
-  {
-    path: 'history-book',
-    component: HistoryBookComponent,
-    pathMatch: 'full',
-  },
-  {
-    path: 'vedas-books',
-    component: VedasBookComponent,
-    pathMatch: 'full'
-  }
+ 
+ 
+  // {
+  //   path: 'commics-book',
+  //   component: CommicsBookComponent,
+  //   pathMatch: 'full'
+  // },
+  // {
+  //   path: 'computer-book',
+  //   component: ComputerBookComponent,
+  //   pathMatch: 'full',
+  // },
+  // {
+  //   path: 'history-book',
+  //   component: HistoryBookComponent,
+  //   pathMatch: 'full',
+  // },
+  // {
+  //   path: 'vedas-books',
+  //   component: VedasBookComponent,
+  //   pathMatch: 'full'
+  // }
 
 ];
 

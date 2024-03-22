@@ -12,7 +12,9 @@ html ,body{
 /* .container{
     background-color: white;
 }  */
-
+.ml5{
+    margin-left: 5px;
+}
 .text-center{
     text-align: center;
 }

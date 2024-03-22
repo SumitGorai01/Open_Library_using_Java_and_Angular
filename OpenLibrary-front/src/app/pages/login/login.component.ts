@@ -49,7 +49,8 @@ export class LoginComponent implements OnInit {
 
     //request to server to generate token
 
-    this.login.generateToken(this.loginData).subscribe((data : any)=>{
+    this.login.generateToken(this.loginData).subscribe(
+      (data : any)=>{
       console.log('success');
 
       //alert on success
@@ -91,8 +92,8 @@ export class LoginComponent implements OnInit {
           else if(this.login.getUserRole()=="USER"){
             //normal-user dashboard
             // window.location.href='/user-dashboard'
-            this.login.loginStatusSubject.next(true);
             this.router.navigate(['user-dashboard']);
+            this.login.loginStatusSubject.next(true);
           }
           else{
             this.login.logout();

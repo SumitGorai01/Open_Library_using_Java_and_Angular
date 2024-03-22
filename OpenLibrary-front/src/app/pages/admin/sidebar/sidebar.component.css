@@ -13,6 +13,7 @@ button{
  button:hover{
    color: black;
     background-color: white;
+    transition: 0.4s;
     span{
       color: black;
     }

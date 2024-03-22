@@ -11,21 +11,18 @@ import { LoginService } from './login.service';
   providedIn:'root'
 })
 export class NormalGuard implements CanActivate{
-
   constructor(private login :LoginService, private router:Router ){}
-
 
   canActivate(
     route: ActivatedRouteSnapshot, 
     state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
+    
     
       if(this.login.isLoginIn() && this.login.getUserRole()=='USER'){
         return true;
       }
       this.router.navigate(['login']);
       return false;
-
-      // throw new Error('Method not implemented.');
   }
 
 }
