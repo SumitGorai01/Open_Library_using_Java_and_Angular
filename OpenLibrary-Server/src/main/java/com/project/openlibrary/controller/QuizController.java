@@ -1,5 +1,7 @@
 package com.project.openlibrary.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.project.openlibrary.entity.Category;
 import com.project.openlibrary.entity.Quiz;
 import com.project.openlibrary.service.QuizService;
 
@@ -57,7 +60,30 @@ public class QuizController {
 	// delete quiz
 	@DeleteMapping("/{quizId}")
 	public void deleteQuiz(@PathVariable("quizId") Long quizId) {
-			this.quizService.deleteQuiz(quizId);
-		}
-
+		this.quizService.deleteQuiz(quizId);
+	}
+	
+	@GetMapping("/category/{categoryId}")
+	public List<Quiz> getQuizzesOfCategory(@PathVariable("categoryId") Long categoryId){
+		
+		Category category = new Category();
+		category.setCategoryId(categoryId);
+		
+		return this.quizService.getQuizzesOfCategory(category);
+		
+	}
+	
+	//get Active quizzes
+	@GetMapping("/active")
+	public List<Quiz> getActiveQuizzes(){
+		return this.quizService.getActiveQuizzes();
+	}
+	
+	//get active quizzes by category
+	@GetMapping("/category/active/{categoryId}")
+	public List<Quiz> getActiveQuizzs(@PathVariable("categoryId") Long categoryId){
+		Category category = new Category();
+		category.setCategoryId(categoryId);
+		return this.quizService.getActiveQuizzesOfCategory(category);
+	}
 }

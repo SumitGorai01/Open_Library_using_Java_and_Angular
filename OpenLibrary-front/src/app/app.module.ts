@@ -54,7 +54,11 @@ import { AddBookComponent } from './pages/admin/add-book/add-book.component';
 import { AddAuthorComponent } from './pages/admin/add-author/add-author.component';
 import { UpdateUserComponent } from './pages/update-user/update-user.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+// import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { ExamDashboardComponent } from './pages/user/exam-dashboard/exam-dashboard.component';
+import { UserSidebarComponent } from './pages/user/user-sidebar/user-sidebar.component';
+import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
+import {MatTreeModule} from '@angular/material/tree';
 @NgModule({
   declarations: [
     AppComponent,
@@ -90,6 +94,9 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
     AddBookComponent,
     AddAuthorComponent,
     UpdateUserComponent,
+    ExamDashboardComponent,
+    UserSidebarComponent,
+    LoadQuizComponent,
   ],
   imports: [
     BrowserModule,
@@ -110,7 +117,8 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
     MatExpansionModule,
     MatSidenavModule,
     FlexLayoutModule,
-    CKEditorModule,
+    MatTreeModule,
+    // CKEditorModule,
   ],
   providers: [
     provideClientHydration(),
