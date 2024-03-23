@@ -54,11 +54,15 @@ import { AddBookComponent } from './pages/admin/add-book/add-book.component';
 import { AddAuthorComponent } from './pages/admin/add-author/add-author.component';
 import { UpdateUserComponent } from './pages/update-user/update-user.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-// import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { ExamDashboardComponent } from './pages/user/exam-dashboard/exam-dashboard.component';
 import { UserSidebarComponent } from './pages/user/user-sidebar/user-sidebar.component';
 import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
 import {MatTreeModule} from '@angular/material/tree';
+import { InstructionsComponent } from './pages/user/instructions/instructions.component';
+import { StartComponent } from './pages/user/start/start.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from "ngx-ui-loader";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -97,6 +101,8 @@ import {MatTreeModule} from '@angular/material/tree';
     ExamDashboardComponent,
     UserSidebarComponent,
     LoadQuizComponent,
+    InstructionsComponent,
+    StartComponent,
   ],
   imports: [
     BrowserModule,
@@ -118,7 +124,12 @@ import {MatTreeModule} from '@angular/material/tree';
     MatSidenavModule,
     FlexLayoutModule,
     MatTreeModule,
-    // CKEditorModule,
+    MatProgressSpinnerModule,
+    NgxUiLoaderModule,
+    NgxUiLoaderHttpModule.forRoot({ 
+      showForeground: true 
+    }),
+    
   ],
   providers: [
     provideClientHydration(),

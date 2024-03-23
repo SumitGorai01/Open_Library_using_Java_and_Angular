@@ -28,6 +28,8 @@ import { AddAuthorComponent } from './pages/admin/add-author/add-author.componen
 import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
 import { ExamDashboardComponent } from './pages/user/exam-dashboard/exam-dashboard.component';
 import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
+import { InstructionsComponent } from './pages/user/instructions/instructions.component';
+import { StartComponent } from './pages/user/start/start.component';
 
 
 const routes: Routes = [
@@ -136,10 +138,18 @@ const routes: Routes = [
       {
         path:'load-quiz/:catId',
         component:LoadQuizComponent,
-      }
-      
-    ]
+      },
+      {
+        path:'instructions/:quizId',
+        component:InstructionsComponent
+      },     
+    ],
   },
+  {
+    path:'start/:quizId',
+    component:StartComponent,
+    canActivate :[NormalGuard]
+  }
  
  
   // {
