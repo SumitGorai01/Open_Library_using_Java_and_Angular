@@ -1,5 +1,9 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { LoginService } from '../../services/login.service';
+<<<<<<< HEAD
+import Swal from 'sweetalert2';
+=======
+>>>>>>> origin/main
 
 @Component({
   selector: 'app-navbar',
@@ -28,6 +32,17 @@ export class NavbarComponent implements OnInit {
     this.login.logout();
     // this.isLoggedIn=false;
     // this.user=null;
+<<<<<<< HEAD
+
+    window.location.href='/';
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Logout Successfully !!",
+      timer: 3000
+    });
+=======
     window.location.reload();
+>>>>>>> origin/main
   }
 }
