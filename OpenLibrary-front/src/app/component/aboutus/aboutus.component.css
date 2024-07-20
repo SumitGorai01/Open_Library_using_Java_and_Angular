@@ -1,0 +1,117 @@
+/* about */
+.container h1 {
+   font-size: 50px;
+}
+
+.about {
+   padding: 2% 0;
+   width: 100%;
+   height: auto;
+   background-color: #fff;
+}
+
+.about .left,
+.about .right {
+   width: 48%;
+   display: inline-block;
+   vertical-align: top;
+}
+
+.about .right img {
+   width: 80%;
+}
+
+.about .left h1 {
+   text-align: center;
+   color: #1EADFF;
+   margin: 0 0 10px 0;
+}
+
+.about .left hr {
+   width: 40%;
+   border-top: 2px solid #000;
+   border-bottom: none;
+   margin-left: 30%;
+}
+
+.about .left p {
+   font-size: 1rem;
+   margin: 40px auto;
+   width: 80%;
+}
+
+.mission {
+   width: 100%;
+   height: auto;
+   background-color: white;
+}
+
+.mission .right,
+.mission .left {
+   width: 48%;
+   display: inline-block;
+   vertical-align: top;
+}
+
+.mission .left img {
+   padding-top: 2%;
+   width: 80%;
+}
+
+.mission .right h1 {
+   text-align: center;
+   color: #1EADFF;
+   margin: 0 0 20px 0;
+}
+
+.mission .right hr {
+   width: 60%;
+   border-top: 2px solid #000;
+   border-bottom: none;
+   margin-left: 20%;
+}
+
+.mission .right p {
+   font-size: 1rem;
+   margin: 40px auto;
+   width: 80%;
+}
+
+/* media */
+@media (max-width: 1200px) {
+
+   .mission .right p,
+   .about .left p {
+      font-size: 0.8rem;
+      margin: 20px auto;
+   }
+}
+
+@media (max-width: 992px) {
+
+   .about .left,
+   .about .right,
+   .mission .left,
+   .mission .right {
+      width: 100%;
+   }
+
+   .team .card {
+      width: 40%;
+   }
+}
+
+@media (max-width: 768px) {
+   .team .card {
+      width: 100%;
+   }
+
+   /* nav {
+       height: 80px;
+   } */
+}
+
+img,
+svg {
+   vertical-align: text-bottom;
+}

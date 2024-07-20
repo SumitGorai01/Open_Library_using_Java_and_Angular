@@ -1,0 +1,56 @@
+<div class="container ">
+	<div class="row">
+		<!-- for images -->
+		<img src="../../../assets/images/Sign up.gif" alt="top">
+		<div id="form-div" class="col-2 ">
+			<!-- for form -->
+			<form (ngSubmit)="formSubmit()">
+
+
+
+				<div class="mb-3 mt-2">
+					<!-- username field -->
+					<label for="Username" class="form-label">Enter username </label>
+					<input [(ngModel)]="user.username" name="username" type="name" class="form-control"
+						placeholder="Create an username" id="username" aria-describedby="userName">
+				</div>
+
+				<!-- password field -->
+				<div class="mb-3">
+					<label for="exampleInputPassword1" class="form-label">Enter Password</label>
+					<input [(ngModel)]="user.password" name="password" type="password" type="password"
+						class="form-control" placeholder="Create password" id="exampleInputPassword1">
+				</div>
+
+				<!-- Name field -->
+				<div class="mb-3">
+					<label for="fullname" class="form-label">Enter Full name</label>
+					<input [(ngModel)]="user.name" name="name" type="name" class="form-control"
+						placeholder="Enter full name" id="fullname">
+				</div>
+
+				<!-- email field -->
+				<div class="mb-3">
+					<label for="exampleInputEmail1" class="form-label">Email address</label>
+					<input [(ngModel)]="user.email" type="email" name="email" type="email" class="form-control"
+						id="exampleInputEmail1" placeholder="Enter email" aria-describedby="emailHelp">
+
+				</div>
+
+				<!-- phoneNo field -->
+				<div class="mb-3">
+					<label for="contactnumber" class="form-label">Enter contact</label>
+					<input [(ngModel)]="user.phone" type="number" name="phone" type="phone" class="form-control"
+						placeholder="Enter phone number" id="phone">
+				</div>
+
+				<button type="submit" class="btn btn-light mt-3">Register</button>
+				<div>
+					<h3 class="mt-4 text-center"> Already have an account? <span><a
+								[routerLink]="'/login'">Login</a></span> </h3>
+				</div>
+			</form>
+		</div>
+	</div>
+
+</div>

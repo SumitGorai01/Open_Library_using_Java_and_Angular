@@ -1,0 +1,33 @@
+mat-card{
+    background-color:#3489ed;
+    color: white;
+    height: 98%;
+ }
+.sidebar hr{
+   color: white;
+}
+
+button{
+    color:white;
+ }
+ button:hover{
+   color: black;
+    background-color: white;
+    transition: 0.4s;
+    span{
+      color: black;
+    }
+ }
+ mat-icon{
+   margin-top: 15px;
+ }
+ .sidebar{
+   color: white;
+ }
+.nav{
+   overflow: hidden;
+   padding:0 35px 0 35px;
+}
+span{
+   color: white;
+}

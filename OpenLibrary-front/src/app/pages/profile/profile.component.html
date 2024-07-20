@@ -1,0 +1,109 @@
+<mat-card>
+
+    <div class="container">
+        <div class="row gutters">
+            <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="account-settings">
+                            <div class="user-profile">
+                                <div class="user-avatar">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Maxwell Admin">
+                                </div>
+                                <h2 class="user-name">{{login.getUser().username}}</h2>
+                                <h2 class="user-email">{{login.getUser().email}}</h2>
+                            </div>
+                            <div class="about">
+                                <h3>About</h3>
+                                <p>I'm {{login.getUser().name}}. Full Stack Designer I enjoy creating user-centric,
+                                    delightful and human
+                                    experiences.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="row gutters">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <h1 class="mb-2 text-primary">Personal Details</h1>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 ">
+                                <div class="form-group">
+                                    <label for="fullName">User ID</label>
+                                    <input type="text" class="form-control" id="fullName"
+                                        placeholder="{{login.getUser().userId}}" readonly>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 ">
+                                <div class="form-group">
+                                    <label for="fullName">User Name</label>
+                                    <input type="text" class="form-control" id="fullName"
+                                        placeholder="{{login.getUser().username}}" readonly>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 ">
+                                <div class="form-group">
+                                    <label for="fullName">Full Name</label>
+                                    <input type="text" class="form-control" id="fullName"
+                                        placeholder="{{login.getUser().name}}" readonly>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="eMail">Email</label>
+                                    <input type="email" class="form-control" id="eMail"
+                                        placeholder="{{login.getUser().email}}" readonly>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input type="text" class="form-control" id="phone"
+                                        placeholder="{{login.getUser().phone}}" readonly>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="phone">Role</label>
+                                    <input type="text" class="form-control" id="phone"
+                                        placeholder="{{login.getUser().authorities[0].authority}}" readonly>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="phone">Status</label>
+                                    <input type="text" class="form-control" id="phone" placeholder="Active " readonly>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="phone">Password</label>
+                                    <input type="text" class="form-control" id="phone"
+                                        placeholder="Not Show for Security" readonly>
+                                </div>
+                            </div>
+
+                        </div>
+                        <br>
+                        <div class="row gutters">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="text-right text-center ml20">
+                                
+                                    <!-- <button type="button" id="submit" name="submit"
+                                        class="btn btn-secondary mr20">Cancel</button> -->
+                                    
+                                    <!-- <button  mat-flat-button color="primary" class="ml20">Update</button> -->
+
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-card>
+<br>
