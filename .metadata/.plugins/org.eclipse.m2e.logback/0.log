@@ -948,6 +948,7 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.apache.to
 2024-03-22 17:04:09,970 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@5ea36ef0{HTTP/1.1, (http/1.1)}{127.0.0.1:0}
 2024-03-22 19:37:59,261 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2024-03-23 09:40:15,120 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+<<<<<<< HEAD
 2024-03-23 14:46:45,122 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2024-03-23 14:46:49,010 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
 2024-03-24 11:00:42,726 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
@@ -956,3 +957,5 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.apache.to
 2024-07-20 14:42:06,037 [Worker-8: Launching OpenLibrary-Server - OpenLibraryServerApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2024-07-20 14:42:06,063 [Worker-8: Launching OpenLibrary-Server - OpenLibraryServerApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2024-07-20 14:42:06,071 [Worker-8: Launching OpenLibrary-Server - OpenLibraryServerApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+=======
+>>>>>>> origin/main
