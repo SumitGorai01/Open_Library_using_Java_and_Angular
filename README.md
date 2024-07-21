@@ -55,21 +55,19 @@ This web-based library project demonstrates the effective integration of Java an
 
 <h2>Project Screenshots:</h2>
 
-<img src="https://github.com/SumitGorai01/Open_Library_using_Java_and_Angular/blob/main/assests/p2.png" alt="project-screenshot" width="400" height="400/">
+<img src="https://github.com/SumitGorai01/Open_Library_using_Java_and_Angular/blob/main/assests/p2.png" alt="project-screenshot" width="700" height="400/">
 
-<img src="https://github.com/SumitGorai01/Open_Library_using_Java_and_Angular/blob/main/assests/p2.png" alt="project-screenshot" width="400" height="400/">
+<img src="https://github.com/SumitGorai01/Open_Library_using_Java_and_Angular/blob/main/assests/p3.png" alt="project-screenshot" width="700" height="400/">
 
-<img src="https://github.com/SumitGorai01/Open_Library_using_Java_and_Angular/blob/main/assests/p3.png" alt="project-screenshot" width="400" height="400/">
+<img src="https://github.com/SumitGorai01/Open_Library_using_Java_and_Angular/blob/main/assests/p4.png" alt="project-screenshot" width="700" height="400/">
 
-<img src="https://github.com/SumitGorai01/Open_Library_using_Java_and_Angular/blob/main/assests/p4.png" alt="project-screenshot" width="400" height="400/">
+<img src="https://github.com/SumitGorai01/Open_Library_using_Java_and_Angular/blob/main/assests/p5.png" alt="project-screenshot" width="700" height="400/">
 
-<img src="https://github.com/SumitGorai01/Open_Library_using_Java_and_Angular/blob/main/assests/p5.png" alt="project-screenshot" width="400" height="400/">
+<img src="https://github.com/SumitGorai01/Open_Library_using_Java_and_Angular/blob/main/assests/p6.png" alt="project-screenshot" width="700" height="400/">
 
-<img src="https://github.com/SumitGorai01/Open_Library_using_Java_and_Angular/blob/main/assests/p6.png" alt="project-screenshot" width="400" height="400/">
+<img src="https://github.com/SumitGorai01/Open_Library_using_Java_and_Angular/blob/main/assests/p7.png" alt="project-screenshot" width="700" height="400/">
 
-<img src="https://github.com/SumitGorai01/Open_Library_using_Java_and_Angular/blob/main/assests/p7.png" alt="project-screenshot" width="400" height="400/">
-
-<img src="https://github.com/SumitGorai01/Open_Library_using_Java_and_Angular/blob/main/assests/p8.png" alt="project-screenshot" width="400" height="400/">
+<img src="https://github.com/SumitGorai01/Open_Library_using_Java_and_Angular/blob/main/assests/p8.png" alt="project-screenshot" width="700" height="400/">
 
 
 <h1 align="center" id="title">Thank You</h1>
