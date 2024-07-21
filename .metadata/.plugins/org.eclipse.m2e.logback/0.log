@@ -959,3 +959,11 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.apache.to
 2024-07-20 14:42:06,071 [Worker-8: Launching OpenLibrary-Server - OpenLibraryServerApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
 =======
 >>>>>>> origin/main
+2024-07-21 13:29:51,939 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-07-21 13:32:22,105 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-12.0.3; built: 2023-10-27T03:25:22.284Z; git: a873259fd5af141dedaa6c7fa8fe8fbdedce0d61; jvm 21+35-LTS-2513
+2024-07-21 13:32:22,237 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started oeje8n.ContextHandler$CoreContextHandler@1a8017ad{/help,/help,b=null,a=AVAILABLE,h=oeje8n.ContextHandler$CoreContextHandler$CoreToNestedHandler@6ab6fe89{STARTED}}
+2024-07-21 13:32:22,239 [Start Help Server] INFO  o.e.j.s.DefaultSessionIdManager - Session workerName=node0
+2024-07-21 13:32:22,323 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@ce52a51{HTTP/1.1, (http/1.1)}{127.0.0.1:53670}
+2024-07-21 13:32:22,370 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started oejs.Server@6cae51f8{STARTING}[12.0.3,sto=0] @174688ms
+2024-07-21 13:45:33,059 [Stop Help Server] INFO  org.eclipse.jetty.server.Server - Stopped oejs.Server@6cae51f8{STOPPING}[12.0.3,sto=0]
+2024-07-21 13:45:33,075 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@ce52a51{HTTP/1.1, (http/1.1)}{127.0.0.1:0}
