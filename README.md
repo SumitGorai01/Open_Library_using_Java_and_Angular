@@ -2,7 +2,7 @@
 
 <h1 align="center" id="title">Open Library</h1>
 
-<p align="center"><img src="https://github.com/SumitGorai01/Open_Library_using_Java_and_Angular/blob/main/assests/Screenshot%20(910).png" alt="project-image"></p>
+<p align="center"><img src="https://github.com/SumitGorai01/Open_Library_using_Java_and_Angular/blob/main/assests/p.png" alt="project-image"></p>
 
 ### Overview
 The project is a dynamic, interactive web-based library designed to enhance user engagement and knowledge retention. It allows users to register, access a wide range of free books, and participate in quizzes on diverse subjects. The application was developed using Java for the back-end and Angular for the front-end, ensuring a robust and responsive user experience.
@@ -49,3 +49,27 @@ The project is a dynamic, interactive web-based library designed to enhance user
 ### Conclusion
 This web-based library project demonstrates the effective integration of Java and Angular to create a dynamic, interactive platform. By focusing on user engagement, security, and seamless data exchange, the project provides a valuable resource for users looking to expand their knowledge through accessible, free resources.
 
+<h2>🚀 Demo</h2>
+
+[\[Click here\](https://www.linkedin.com/posts/sumitgorai01\_exciting-announcement-i-am-thrilled-activity-7177567750729441280-L6vB?utm\_source=share&utm\_medium=member\_desktop)]([Click here](https://www.linkedin.com/posts/sumitgorai01_exciting-announcement-i-am-thrilled-activity-7177567750729441280-L6vB?utm_source=share&utm_medium=member_desktop))
+
+<h2>Project Screenshots:</h2>
+
+<img src="https://github.com/SumitGorai01/Open_Library_using_Java_and_Angular/blob/main/assests/p2.png" alt="project-screenshot" width="400" height="400/">
+
+<img src="https://github.com/SumitGorai01/Open_Library_using_Java_and_Angular/blob/main/assests/p2.png" alt="project-screenshot" width="400" height="400/">
+
+<img src="https://github.com/SumitGorai01/Open_Library_using_Java_and_Angular/blob/main/assests/p3.png" alt="project-screenshot" width="400" height="400/">
+
+<img src="https://github.com/SumitGorai01/Open_Library_using_Java_and_Angular/blob/main/assests/p4.png" alt="project-screenshot" width="400" height="400/">
+
+<img src="https://github.com/SumitGorai01/Open_Library_using_Java_and_Angular/blob/main/assests/p5.png" alt="project-screenshot" width="400" height="400/">
+
+<img src="https://github.com/SumitGorai01/Open_Library_using_Java_and_Angular/blob/main/assests/p6.png" alt="project-screenshot" width="400" height="400/">
+
+<img src="https://github.com/SumitGorai01/Open_Library_using_Java_and_Angular/blob/main/assests/p7.png" alt="project-screenshot" width="400" height="400/">
+
+<img src="https://github.com/SumitGorai01/Open_Library_using_Java_and_Angular/blob/main/assests/p8.png" alt="project-screenshot" width="400" height="400/">
+
+
+<h1 align="center" id="title">Thank You</h1>
