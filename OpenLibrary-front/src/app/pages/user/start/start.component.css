@@ -5,3 +5,43 @@
     text-align: center;
     justify-content: center;
 }
+@media print {
+    body {
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+  
+    #printable-section {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+  
+    .mat-card {
+      box-shadow: none;
+      border: 1px solid #000;
+    }
+  
+    .mat-card-header, .mat-card-actions {
+      display: none;
+    }
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+  
+    table th, table td {
+      border: 1px solid #000;
+      padding: 10px;
+      text-align: left;
+    }
+  
+    table th {
+      background-color: #f1f1f1;
+    }
+  }
+  

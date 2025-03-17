@@ -1,77 +1,87 @@
- @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
 
- mat-icon {
-   font-size: 1em;
+mat-icon {
+  font-size: 1em;
+}
 
- }
+.logo {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  margin-left: 20px;
+}
 
- .logo {
+span #p {
+  color: white;
+}
 
-   font-family: 'Roboto', sans-serif;
-   font-weight: bold;
-   font-size: 35px;
-   margin-left: 20px;
- }
-
- span #p {
-   color: #3489eb;
- }
-
- /* .example-spacer {
+/* .example-spacer {
   flex: 1 1 auto;
 } */
- .nav1 {
-   font-size: 20px;
-   margin-left: 10px;
-   margin-right: 10px;
- }
+.nav1 {
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
- .nav:hover {
-   width: 100%;
-   background-color: #3489eb;
-   color: white;
-   transition: 0.3s;
- }
+.nav:hover {
+  width: 100%;
+  background-color: #3489eb;
+  color: white;
+  transition: 0.3s;
+}
 
- .nav {
-   font-size: 20px;
-   margin-left: 10px;
-   margin-right: 10px;
- }
+.nav {
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
- .nav1:hover {
-   background-color: #3489eb;
-   color: white;
-   transition: 0.3s;
- }
+.nav1:hover {
+  background-color: #3489eb;
+  color: white;
+  transition: 0.3s;
+}
 
- .book:hover {
-   background-color: #3489eb;
- }
+.book:hover {
+  background-color: #3489eb;
+}
 
- .imagelogo {
-   width: 35px;
-   height: 35px;
-   border-radius: 20%;
+.imagelogo {
+  width: 35px;
+  height: 35px;
+  border-radius: 20%;
+}
 
- }
+.menu-spacer {
+  flex: 1 1 auto;
+}
 
+.mat-drawer-container {
+  position: relative;
+  z-index: 1;
+  color: var(--mat-sidenav-content-text-color);
+  background-color: white;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  display: block;
+  overflow: hidden;
+}
 
- .menu-spacer {
-   flex: 1 1 auto;
- }
+#tog :hover {
+  background-color: #3489eb;
+}
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure it's on top of other elements */
+  background-color: #3489eb; /* Optional: Add background color to ensure visibility */
+}
 
- .mat-drawer-container {
-   position: relative;
-   z-index: 1;
-   color: var(--mat-sidenav-content-text-color);
-   background-color: white;
-   box-sizing: border-box;
-   -webkit-overflow-scrolling: touch;
-   display: block;
-   overflow: hidden;
- }
+.menu-spacer {
+  flex-grow: 1;
+}
 
- #tog :hover {
-   background-color: #3489eb;
- }
+.nav {
+  padding: 10px;
+}

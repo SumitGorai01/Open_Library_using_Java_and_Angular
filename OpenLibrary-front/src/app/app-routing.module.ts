@@ -30,6 +30,9 @@ import { ExamDashboardComponent } from './pages/user/exam-dashboard/exam-dashboa
 import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
 import { InstructionsComponent } from './pages/user/instructions/instructions.component';
 import { StartComponent } from './pages/user/start/start.component';
+import { ContactComponent } from './component/contact/contact.component';
+import { FaqComponent } from './component/faq/faq.component';
+import { AboutusComponent } from './component/aboutus/aboutus.component';
 
 
 const routes: Routes = [
@@ -149,6 +152,18 @@ const routes: Routes = [
     path:'start/:quizId',
     component:StartComponent,
     canActivate :[NormalGuard]
+  },
+  {
+    path:'contact',
+    component:ContactComponent
+  },
+  {
+    path:'faq',
+    component:FaqComponent
+  },
+  {
+    path:'about',
+    component: AboutusComponent
   }
  
  

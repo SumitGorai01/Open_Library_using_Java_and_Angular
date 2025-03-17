@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { QuestionService } from '../../../services/question.service';
 import { error } from 'console';
 import Swal from 'sweetalert2';
+import { LoginService } from '../../../services/login.service';
 
 @Component({
   selector: 'app-start',
@@ -11,6 +12,7 @@ import Swal from 'sweetalert2';
   styleUrl: './start.component.css'
 })
 export class StartComponent implements OnInit {
+  user = null;
 
   quizId: any;
   questions: any;
@@ -25,13 +27,15 @@ export class StartComponent implements OnInit {
   constructor(
     private _locationSt: LocationStrategy,
     private _route: ActivatedRoute,
-    private _question: QuestionService
+    private _question: QuestionService,
+    public login: LoginService
   ) { }
   ngOnInit(): void {
     this.preventBackButton();
     this.quizId = this._route.snapshot.params['quizId'];
     console.log(this.quizId);
     this.loadQuestions();
+    this.user=this.login.getUser();
     // throw new Error('Method not implemented.');
   }
   loadQuestions() {
@@ -114,4 +118,14 @@ export class StartComponent implements OnInit {
 
 
   }
+  printResult() {
+    const printContent = document.getElementById('printable-section')?.innerHTML;
+    const originalContent = document.body.innerHTML;
+  
+    document.body.innerHTML = printContent!;
+    window.print();
+    document.body.innerHTML = originalContent;
+  }
+  
+  
 }

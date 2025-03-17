@@ -1,40 +1,71 @@
-
-<footer class="bg-light text-center text-lg-start footer">
-  <!-- Copyright -->
-  <div class="footer text-center p-3">
-    © 2024 Copyright : 
-    <a class="text-dark" routerLink="/">OpenLibrary.com </a>| <a href="#about"> About Us </a> | <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"> Terms of Service </a>
-  </div>
-  <!-- Copyright -->
-</footer>
-
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title" id="exampleModalLabel">Terms and Conditions</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-           <b>Access: </b>Access to the e-library is granted to registered members only. Members must be 15 years of age or older to access the library. By accessing the Open-Library, you agree to these terms and conditions.
-            <br>
-           <b>Membership: </b>Memberships are available to individuals who meet the eligibility criteria. To become a member, you must complete the registration process and provide accurate and complete information. You are responsible for keeping your account information up-to-date. <br>
-
-            <b>Access Restrictions: </b>The Open-Library reserves the right to restrict or terminate access to any member who violates these terms and conditions or engages in any activity that is harmful to the e-library. <br>
-
-            <b>Copyright: </b> All materials in the Open-Library are protected by copyright law. Members may use the materials for personal, educational, or research purposes only. Members may not copy, reproduce, distribute, or use the materials for commercial purposes without prior written permission from the copyright owner. <br>
-
-            <b>Security: </b> Members are responsible for maintaining the confidentiality of their login information and for all activities that occur under their account. The Open-Library is not responsible for any unauthorized access to member accounts. <br>
-            <b>Use of Resources: </b> Members are responsible for using the Open-Library's resources in a manner consistent with the Open-Library's mission and policies. Members may not use the e-library's resources for illegal, unethical, or inappropriate purposes. <br>
-            <b>Liability: </b>The Open-Library is not liable for any damages, including but not limited to direct, indirect, incidental, or consequential damages, arising from the use or inability to use the e-library's resources. <br>
-
-            <b>Termination:  </b>The Open-Library reserves the right to terminate a member's access to the Open-Library for any reason, including but not limited to violation of these terms and conditions.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">I Agree</button>
-        </div>
-      </div>
+  <!-- Terms and Conditions Modal -->
+<div id="exampleModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+  <div class="bg-white rounded-lg shadow-lg w-full max-w-lg">
+    
+    <!-- Modal Header -->
+    <div class="bg-blue-600 text-white px-6 py-4 flex justify-between items-center rounded-t-lg">
+      <h2 class="text-lg font-semibold">Terms and Conditions</h2>
+      <button class="text-white hover:text-gray-200 focus:outline-none" onclick="closeModal()">
+        ✖
+      </button>
     </div>
+
+    <!-- Modal Body -->
+    <div class="p-6 space-y-4 text-gray-700 text-sm leading-relaxed">
+      <p><b class="font-semibold">Access:</b> Access to the e-library is granted to registered members only. Members must be <u>15 years of age or older</u>. By accessing the Open-Library, you agree to these terms and conditions.</p>
+
+      <p><b class="font-semibold">Membership:</b> Memberships are available to eligible individuals. You must complete registration with accurate details and keep your account updated.</p>
+
+      <p><b class="font-semibold">Access Restrictions:</b> The Open-Library reserves the right to restrict or terminate access for violations of these terms.</p>
+
+      <p><b class="font-semibold">Copyright:</b> All materials are protected under copyright law. Usage is limited to personal, educational, or research purposes only.</p>
+
+      <p><b class="font-semibold">Security:</b> Members are responsible for maintaining the confidentiality of their login credentials.</p>
+
+      <p><b class="font-semibold">Use of Resources:</b> The e-library's resources must not be used for illegal or unethical purposes.</p>
+
+      <p><b class="font-semibold">Liability:</b> The Open-Library is not liable for any damages resulting from the use or inability to use its resources.</p>
+
+      <p><b class="font-semibold">Termination:</b> The Open-Library reserves the right to terminate access at any time for violations of these terms.</p>
+    </div>
+
+    <!-- Modal Footer -->
+    <div class="bg-gray-100 px-6 py-4 flex justify-between rounded-b-lg">
+      <button class="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400" onclick="closeModal()">Close</button>
+      <button class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">I Agree</button>
+    </div>
+
   </div>
+</div>
+
+<!-- JavaScript for Modal -->
+<script>
+  function closeModal() {
+    document.getElementById('exampleModal').classList.add('hidden');
+  }
+</script>
+
+
+  
+
+<footer class="bg-[#3489ed] rounded-lg shadow-sm m-2">
+  <div class="w-full mx-auto max-w-screen-xl p-1 md:flex md:items-center md:justify-between">
+    <span class="text-base text-white sm:text-center">© 2024 <a class="hover:underline text-black">OpenLibrary</a> All Rights Reserved.
+  </span>
+  <ul class="flex flex-wrap items-center mt-3 text-base font-medium text-white sm:mt-0">
+      <li>
+          <a href="#about" class="hover:underline me-4 md:me-8 text-white">About</a>
+      </li>
+      <li>
+          <a href="#" class="hover:underline me-4 md:me-8 text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">Terms & Service</a>
+      </li>
+      <li>
+          <a href="#faq" class="hover:underline me-4 md:me-8 text-white">faq</a>
+      </li>
+      <li>
+          <a href="#contact" class="hover:underline text-white">Contact</a>
+      </li>
+  </ul>
+  </div>
+</footer>

@@ -1,56 +1,65 @@
-<div class="container ">
-	<div class="row">
-		<!-- for images -->
-		<img src="../../../assets/images/Sign up.gif" alt="top">
-		<div id="form-div" class="col-2 ">
-			<!-- for form -->
-			<form (ngSubmit)="formSubmit()">
-
-
-
-				<div class="mb-3 mt-2">
-					<!-- username field -->
-					<label for="Username" class="form-label">Enter username </label>
-					<input [(ngModel)]="user.username" name="username" type="name" class="form-control"
-						placeholder="Create an username" id="username" aria-describedby="userName">
-				</div>
-
-				<!-- password field -->
-				<div class="mb-3">
-					<label for="exampleInputPassword1" class="form-label">Enter Password</label>
-					<input [(ngModel)]="user.password" name="password" type="password" type="password"
-						class="form-control" placeholder="Create password" id="exampleInputPassword1">
-				</div>
-
-				<!-- Name field -->
-				<div class="mb-3">
-					<label for="fullname" class="form-label">Enter Full name</label>
-					<input [(ngModel)]="user.name" name="name" type="name" class="form-control"
-						placeholder="Enter full name" id="fullname">
-				</div>
-
-				<!-- email field -->
-				<div class="mb-3">
-					<label for="exampleInputEmail1" class="form-label">Email address</label>
-					<input [(ngModel)]="user.email" type="email" name="email" type="email" class="form-control"
-						id="exampleInputEmail1" placeholder="Enter email" aria-describedby="emailHelp">
-
-				</div>
-
-				<!-- phoneNo field -->
-				<div class="mb-3">
-					<label for="contactnumber" class="form-label">Enter contact</label>
-					<input [(ngModel)]="user.phone" type="number" name="phone" type="phone" class="form-control"
-						placeholder="Enter phone number" id="phone">
-				</div>
-
-				<button type="submit" class="btn btn-light mt-3">Register</button>
-				<div>
-					<h3 class="mt-4 text-center"> Already have an account? <span><a
-								[routerLink]="'/login'">Login</a></span> </h3>
-				</div>
-			</form>
-		</div>
+<div class="min-h-screen flex items-center justify-center py-2 px-4">
+	<div class="grid md:grid-cols-2 items-center gap-2 max-w-6xl w-full">
+	  <!-- Image Section -->
+	  <div class="max-md:mt-8">
+		<img src="../../../assets/images/signup.svg" class="w-full mx-auto block object-cover" alt="Sign Up Image" />
+	  </div>
+	  
+	  <!-- Form Section -->
+	  <div class="border border-gray-300 rounded-lg p-6 max-w-md shadow-lg max-md:mx-auto">
+		<form class="space-y-4" (ngSubmit)="formSubmit()">
+		  
+		  <!-- Form Title -->
+		  <div class="mb-1">
+			<h3 class="text-blue-800 font-bold">Create an Account</h3>
+			<p class="text-gray-500 text-sm mt-2 leading-relaxed">Join us today and start exploring the features of our platform. The journey begins here.</p>
+		  </div>
+  
+		  <!-- Username field -->
+		  <div class="field-container animate__animated animate__fadeInUp animate__delay-1s">
+			<label class="text-gray-800 text-sm mb-2 block">Username</label>
+			<input [(ngModel)]="user.username" name="username" type="text" class="hover-input w-full text-sm text-gray-800 border border-blue-700 pl-4 pr-10 py-3 rounded-lg  outline-blue-600 transition-transform transform hover:scale-105" placeholder="Enter a username" />
+		  </div>
+  
+		  <!-- Full Name field -->
+		  <div class="field-container animate__animated animate__fadeInUp animate__delay-1.2s">
+			<label class="text-gray-800 text-sm mb-2 block">Full Name</label>
+			<input [(ngModel)]="user.name" name="name" type="text" class="hover-input w-full text-sm text-gray-800 border border-gray-300 pl-4 pr-10 py-3 rounded-lg outline-blue-600 transition-transform transform hover:scale-105" placeholder="Enter your full name" />
+		  </div>
+  
+		  <!-- Email field -->
+		  <div class="field-container animate__animated animate__fadeInUp animate__delay-1.4s">
+			<label class="text-gray-800 text-sm mb-2 block">Email Address</label>
+			<input [(ngModel)]="user.email" name="email" type="email" class="hover-input w-full text-sm text-gray-800 border border-gray-300 pl-4 pr-10 py-3 rounded-lg outline-blue-600 transition-transform transform hover:scale-105" placeholder="Enter email" />
+		  </div>
+  
+		  <!-- Phone Number field -->
+		  <div class="field-container animate__animated animate__fadeInUp animate__delay-1.6s">
+			<label class="text-gray-800 text-sm mb-2 block">Phone Number</label>
+			<input [(ngModel)]="user.phone" name="phone" type="tel" class="hover-input w-full text-sm text-gray-800 border border-gray-300 pl-4 pr-10 py-3 rounded-lg outline-blue-600 transition-transform transform hover:scale-105" placeholder="Enter phone number" />
+		  </div>
+  
+		  <!-- Password field -->
+		  <div class="field-container animate__animated animate__fadeInUp animate__delay-1.8s">
+			<label class="text-gray-800 text-sm mb-2 block">Password</label>
+			<input [(ngModel)]="user.password" name="password" type="password" class="hover-input w-full text-sm text-gray-800 border border-gray-300 pl-4 pr-10 py-3 rounded-lg outline-blue-600 transition-transform transform hover:scale-105" placeholder="Enter password" />
+		  </div>
+  
+		  <!-- Submit Button -->
+		  <div class="!mt-8 animate__animated animate__fadeInUp animate__delay-2s">
+			<button type="submit" class="w-full bg-orange-600 text-white hover:opacity-90 hover:shadow-lg active:scale-95 transition-all py-2.5 px-4 text-sm tracking-wide rounded-lg hover:bg-blue-700 focus:outline-none">
+			  Register
+			</button>
+		  </div>
+  
+		  <!-- Link to Login -->
+		  <p class="text-sm !mt-8 text-center text-gray-500 animate__animated animate__fadeInUp animate__delay-2.2s">Already have an account?
+			<a routerLink="/login" class="text-blue-600 font-semibold hover:underline ml-1">Login here</a>
+		  </p>
+		</form>
+	  </div>
 	</div>
+  </div>
+  
 
-</div>
+  
