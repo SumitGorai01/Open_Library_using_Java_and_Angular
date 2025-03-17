@@ -13,7 +13,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { FormsModule } from '@angular/forms';
+import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { HomeComponent } from './pages/home/home.component';
@@ -62,6 +62,7 @@ import { InstructionsComponent } from './pages/user/instructions/instructions.co
 import { StartComponent } from './pages/user/start/start.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from "ngx-ui-loader";
+import {LucideAngularModule, BookOpen, Facebook, HeartHandshake, Instagram , Mail, Megaphone, Rocket, Twitter, Users, icons } from 'lucide-angular';
 
 @NgModule({
   declarations: [
@@ -129,6 +130,8 @@ import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from "ngx-ui-loader";
     NgxUiLoaderHttpModule.forRoot({ 
       showForeground: true 
     }),
+    LucideAngularModule.pick({ Rocket, Users, BookOpen, Megaphone, HeartHandshake, Mail, Twitter, Facebook, Instagram }),
+    ReactiveFormsModule,
     
   ],
   providers: [

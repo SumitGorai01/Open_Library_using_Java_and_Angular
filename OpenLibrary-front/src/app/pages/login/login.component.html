@@ -1,29 +1,49 @@
-<div class="container ">
-  <div class="row">
-    <!-- for images -->
-    <img src="../../../assets/images/Login.gif" alt="top">
-    <div id="form-div" class="col-2 ">
-      <!-- for form -->
-      <form class="mt-5" (ngSubmit)="formSubmit()">
-        <div class="mb-2">
-          <label for="exampleInputEmail1" class="form-label">Enter username</label>
-          <input [(ngModel)]="loginData.username" name="username" type="text" class="form-control"
-            id="exampleInputEmail1" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input [(ngModel)]="loginData.password" name="password" type="password" class="form-control"
-            id="exampleInputPassword1">
+<div class="min-h-screen flex items-center justify-center py-2 px-4">
+  <div class="grid md:grid-cols-2 items-center gap-2 max-w-6xl w-full">
+    <div class="max-md:mt-8">
+      <img src="../../../assets/images/Login.gif" class="w-full  mx-auto block object-cover" alt="Dining Experience" />
+    </div>
+    <div class="border border-gray-300 rounded-lg p-6 max-w-md shadow-lg max-md:mx-auto">
+      <form  class="space-y-4" (ngSubmit)="formSubmit()">
+        <!-- <div class="mb-2 flex justify-center">
+          <span class="inline-block w-full max-w-[100px]">
+            <img src="assets/logo.png" width="100%" alt="Logo" />
+          </span>
+        </div> -->
+
+        <div class="mb-4">
+          <h3 class="text-blue-800 font-bold">Sign in</h3>
+          <p class="text-gray-500 text-sm mt-4 leading-relaxed">Sign in to your account and explore a world of possibilities. Your journey begins here.</p>
         </div>
 
-        <button type="submit" class="btn btn-light mt-3 ">Login</button>
         <div>
-          <h3 class="mt-5 text-center">Don't have an account? <span><a [routerLink]="'/signup'">Register</a></span>
-          </h3>
+          <label class="text-gray-800 text-sm mb-2 block">Email</label>
+          <input [(ngModel)]="loginData.username" name="username" type="text" class="hover-input w-full text-sm text-gray-800 border border-gray-300 pl-4 pr-10 py-3 rounded-lg outline-orange-600" placeholder="Enter username" />
+          
         </div>
+
+        <div>
+          <label class="text-gray-800 text-sm mb-2 block">Password</label>
+          <input [(ngModel)]="loginData.password" name="password" type="password" class="hover-input w-full text-sm text-gray-800 border border-gray-300 pl-4 pr-10 py-3 rounded-lg outline-orange-600" placeholder="Enter password" />
+         
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <div class="text-sm">
+            <a routerLink="/forgot-password" class="text-sm text-blue-500 hover:underline">Forgot Your Password?</a>
+          </div>
+        </div>
+
+        <div class="!mt-8">
+          <button type="submit" class="w-full bg-orange-600 text-white hover:opacity-90 hover:shadow-lg active:scale-95 transition-all py-2.5 px-4 text-sm tracking-wide rounded-lg hover:bg-blue-700 focus:outline-none">
+            Sign in
+          </button>
+        </div>
+
+        <p class="text-sm !mt-8 text-center text-gray-500">Don't have an account?
+          <a routerLink="/signup" class="text-blue-600 font-semibold hover:underline ml-1">Register here</a>
+        </p>
       </form>
     </div>
   </div>
-
 </div>

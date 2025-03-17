@@ -1,59 +1,78 @@
-<div class="container">
-    <div class="contact" id="contact">
-        <div class="about" id="about">
-            <div class="left">
-                <h1>Contact Us</h1>
-                <hr>
-                <div class="container">
+<div class="pl-6 pr-6 pt-0 contact-section" id="contact">
+    <h1 class="text-4xl font-bold m-6 p-2 text-center text-blue-800">
+        Contact Us
+    </h1>
 
-                    <div class="content">
-                        <div class="left-side">
-                            <div class="address details">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div class="topic">Address</div>
-                                <div class="text-one">Ranchi, Jharkhand</div>
-                                <div class="text-two">India</div>
-                            </div>
-                            <div class="phone details">
-                                <i class="fas fa-phone-alt"></i>
-                                <div class="topic">Phone</div>
-                                <div class="text-one">+91-98 9893 5647</div>
-                                <div class="text-two">+91-96 3434 5678</div>
-                            </div>
-                            <div class="email details">
-                                <i class="fas fa-envelope"></i>
-                                <div class="topic">Email</div>
-                                <div class="text-one">youremail</div>
-                                <!-- <div class="text-two">sumit@gmail.com</div> -->
-                            </div>
+    <div
+        class="grid md:grid-cols-3 grid-cols-1 items-start gap-12 p-8 mx-auto mb-5 max-w-6xl shadow-lg rounded-md font-[sans-serif] bg-blue-400 dark:bg-blue-600"
+    >
+        <!-- First Div - Contact Details -->
+        <div>
+            <h1 class="text-3xl font-bold text-gray-900 dark:text-white">Let's Talk</h1>
+            <p class="text-sm text-gray-500 mt-4 dark:text-gray-300">
+                Have a great idea or need assistance with your project? Feel free to reach out to us.
+            </p>
+
+            <!-- Email Section -->
+            <div class="mt-4">
+                <h2 class="text-gray-800 text-base font-bold dark:text-white">Email</h2>
+                <ul class="mt-2">
+                    <li class="flex items-center transition-all duration-300 hover:scale-105">
+                        <div class="bg-gray-200 h-12 w-12 rounded-full flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-envelope text-orange-600 text-xl"></i>
                         </div>
-                        <div class="right-side">
-                            <div class="topic-text">Send us a message</div>
-                            <p>If you have any work from me or any types of quries related
-                                to my tutorial, you can send me message from here. It's my
-                                pleasure to help you.</p>
-                            <form action="#">
-                                <div class="input-box">
-                                    <input type="text" placeholder="Enter your name">
-                                </div>
-                                <div class="input-box">
-                                    <input type="text" placeholder="Enter your email">
-                                </div>
-                                <div class="input-box message-box">
-                                    <input type="text" placeholder="Enter your message..">
-                                </div>
-                                <div class="button">
-                                    <input type="button" value="Send Now">
-                                </div>
-                            </form>
-                        </div>
-                        <div class="right">
-                            <img src="../../../assets/images/Contact us.gif" alt="">
-                        </div>
-                    </div>
-                </div>
+                        <a href="mailto:info@example.com" class="text-gray-800 dark:text-white text-sm ml-4">
+                            <small class="block">Mail</small>
+                            <strong class="text-lg">info&#64;example.com</strong>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="clear"></div>
+
+            <!-- Social Links -->
+            <div class="mt-4">
+                <h2 class="text-gray-800 text-base font-bold dark:text-white">Follow Us</h2>
+                <ul class="flex mt-2 space-x-4">
+                    <li class="h-12 w-12 rounded-full flex items-center justify-center bg-gray-200 hover:bg-blue-600 transition-all duration-300 hover:scale-110">
+                        <a href="https://facebook.com">
+                            <i class="fa-brands fa-facebook-f text-lg text-gray-700 hover:text-white"></i>
+                        </a>
+                    </li>
+                    <li class="h-12 w-12 rounded-full flex items-center justify-center bg-gray-200 hover:bg-blue-700 transition-all duration-300 hover:scale-110">
+                        <a href="https://linkedin.com">
+                            <i class="fa-brands fa-linkedin-in text-lg text-gray-700 hover:text-white"></i>
+                        </a>
+                    </li>
+                    <li class="h-12 w-12 rounded-full flex items-center justify-center bg-gray-200 hover:bg-pink-500 transition-all duration-300 hover:scale-110">
+                        <a href="https://instagram.com">
+                            <i class="fa-brands fa-instagram text-lg text-gray-700 hover:text-white"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Center Div - Image -->
+        <div class="flex justify-center items-center">
+            <img src="../../../assets/images/Contact us.gif" alt="Contact Us" class="rounded-lg shadow-md w-full max-h-100 object-cover">
+        </div>
+
+        <!-- Last Div - Contact Form -->
+        <div>
+            <form (ngSubmit)="onSubmit(emailForm)" #emailForm="ngForm" class="space-y-2">
+                <label class="block text-sm font-medium text-gray-700">Your Name</label>
+                <input type="text" class="border p-3 w-full rounded-md focus:ring-2 focus:ring-orange-500 transition-all duration-300" id="name" name="name" ngModel placeholder="Enter your name" required />
+
+                <label class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" class="border p-3 w-full rounded-md focus:ring-2 focus:ring-orange-500 transition-all duration-300" id="email" name="email" ngModel placeholder="Enter your email" required />
+
+                <label class="block text-sm font-medium text-gray-700">Message</label>
+                <textarea class="border p-3 w-full rounded-md focus:ring-2 focus:ring-orange-500 transition-all duration-300" id="message" name="message" ngModel placeholder="Enter your message.." rows="4"></textarea>
+
+                <button class="bg-orange-600 text-white px-4 py-2 rounded-md w-full font-medium text-lg hover:bg-orange-700 transition-all duration-300">
+                    Send Email
+                </button>
+            </form>
         </div>
     </div>
 </div>
