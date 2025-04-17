@@ -9,9 +9,10 @@ declare var Email: any;
 })
 export class EmailService {
   private smtpConfig = {
-    Host: "smtp.elasticemail.com",
+    Host : "s1.maildns.net",
     Username: "goraisumit01@gmail.com",
-    Password: "68F730BD7F008A0DC76C37C5F363DCDA6B71",
+    // Password: "68F730BD7F008A0DC76C37C5F363DCDA6B71",
+    Password: "4BD3D244F4105452E8B5EFB82B884B244EFE",
     To: 'goraisumit01@gmail.com',
     From: 'goraisumit01@gmail.com',
     Subject: "Message From Open Library"
@@ -35,10 +36,11 @@ export class EmailService {
           timer: 3000
         });
       } else {
+        console.log(message);
         Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: "Something went wrong!",
+          text: "Something went fhdhd!",
           showConfirmButton: false,
           timer: 3000
         });

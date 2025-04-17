@@ -16,7 +16,7 @@
                     <i [ngClass]="openIndex === i ? 'fas fa-chevron-up text-indigo-600' : 'fas fa-chevron-down text-gray-600'" class="transition-transform duration-200"></i>
                 </div>
   
-                <div *ngIf="openIndex === i" class="mt-2 bg-indigo-50 p-2 rounded-lg shadow-md text-sm text-gray-700">
+                <div *ngIf="openIndex === i" class="mt-2 bg-indigo-50 p-2 rounded-lg shadow-md text-sm text-gray-700 transition duration-300 ease-in">
                     <div class="flex items-center space-x-3">
                         <i class="fas fa-user-tie text-green-500 text-lg"></i>
                         <p>{{ item.answer }}</p>

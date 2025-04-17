@@ -23,7 +23,7 @@
                     </mat-card-content>
 
                     <mat-card-actions>
-                        <button mat-raised-button color="primary" class="ml5">View</button>
+                        <button mat-raised-button color="primary"  [routerLink]="'/user-dashboard/instructions/'+ q.quizId" class="ml5">View</button>
                         <button class="ml5" mat-stroked-button color="accent">Questions:{{q.numberOfQuestions}} </button>
                         <button class="ml5" mat-stroked-button color="accent">Marks:{{q.maxMarks}} </button>
                         <button [routerLink]="'/user-dashboard/instructions/'+ q.quizId" class="ml5" mat-raised-button color="primary">Start</button>

@@ -1,5 +1,6 @@
-  <!-- Modal -->
-  <!-- Terms and Conditions Modal -->
+<!-- Modal -->
+ <br>
+<!-- Terms and Conditions Modal -->
 <div id="exampleModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
   <div class="bg-white rounded-lg shadow-lg w-full max-w-lg">
     
@@ -41,31 +42,33 @@
 
 <!-- JavaScript for Modal -->
 <script>
+  function openModal() {
+    document.getElementById('exampleModal').classList.remove('hidden');
+  }
+
   function closeModal() {
     document.getElementById('exampleModal').classList.add('hidden');
   }
 </script>
+<footer class="bg-[#3489ed] rounded-t-lg shadow-sm ml-2 mr-2">
+  <div class="w-full mx-auto max-w-screen-xl md:flex md:items-center md:justify-between">
+    <span class="text-base text-white sm:text-center">
+      © 2024 <a class="hover:underline text-black">OpenLibrary</a> | All Rights Reserved.
+    </span>
 
-
-  
-
-<footer class="bg-[#3489ed] rounded-lg shadow-sm m-2">
-  <div class="w-full mx-auto max-w-screen-xl p-1 md:flex md:items-center md:justify-between">
-    <span class="text-base text-white sm:text-center">© 2024 <a class="hover:underline text-black">OpenLibrary</a> All Rights Reserved.
-  </span>
-  <ul class="flex flex-wrap items-center mt-3 text-base font-medium text-white sm:mt-0">
+    <ul class="flex flex-wrap items-center mt-3 text-base font-medium text-white sm:mt-0">
       <li>
-          <a href="#about" class="hover:underline me-4 md:me-8 text-white">About</a>
+        <a href="#about" class="hover:underline me-4 md:me-8 text-white">About</a>
       </li>
       <li>
-          <a href="#" class="hover:underline me-4 md:me-8 text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">Terms & Service</a>
+        <a href="#" class="hover:underline me-4 md:me-8 text-white" onclick="openModal()">Terms & Service</a>
       </li>
       <li>
-          <a href="#faq" class="hover:underline me-4 md:me-8 text-white">faq</a>
+        <a href="#faq" class="hover:underline me-4 md:me-8 text-white">FAQ</a>
       </li>
       <li>
-          <a href="#contact" class="hover:underline text-white">Contact</a>
+        <a href="#contact" class="hover:underline text-white">Contact</a>
       </li>
-  </ul>
+    </ul>
   </div>
 </footer>
