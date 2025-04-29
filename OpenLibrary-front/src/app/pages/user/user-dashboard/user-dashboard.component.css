@@ -1,2 +1,38 @@
 
 
+/* Ensuring that all images have the same size and keep their aspect ratio */
+.card-img {
+    width: 100%;  /* Makes the image take full width of its parent (card) */
+    height: 200px;  /* Fixed height for all images */
+    object-fit: cover;  /* Ensures images fill the container while maintaining aspect ratio */
+    border-radius: 0.25rem;  /* Optional: Round the corners of the image */
+  }
+  
+  /* Optionally, you can style the card body as needed */
+  .card-body {
+    text-align: center;
+  }
+  /* Ensure all images have the same size and maintain aspect ratio */
+.card-img {
+    width: 100%;  /* Ensures the image takes the full width of its container */
+    height: 200px;  /* Fixed height for the image */
+    object-fit: cover;  /* Maintains the aspect ratio while filling the container */
+    border-radius: 0.25rem;  /* Optional: rounded corners */
+  }
+  
+  /* Styling for the author and book name text */
+  .author-name {
+    font-size: 14px;
+  }
+  
+  .book-name {
+    font-size: 18px;
+    text-align: center; /* Center the book name */
+  }
+  
+  /* Hover effects for interactivity */
+  .card:hover {
+    transform: translateY(-5px); /* Card lift effect */
+    transition: transform 0.3s ease-in-out;
+  }
+  

@@ -43,7 +43,7 @@ public class MySecurityConfig {
 			.cors()
 			.disable()
 			.authorizeRequests()
-			.requestMatchers("/generate-token","/user/")
+			.requestMatchers("/generate-token","/user/","/book/image/**", "/book/pdf/**")
 			.permitAll()
 			.requestMatchers(HttpMethod.OPTIONS)
 			.permitAll()
