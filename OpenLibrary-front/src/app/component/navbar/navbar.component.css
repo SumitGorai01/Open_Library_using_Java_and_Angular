@@ -12,7 +12,7 @@ mat-icon {
 }
 
 span #p {
-  color: white;
+  color: rgb(244, 135, 2);
 }
 
 /* .example-spacer {
@@ -26,7 +26,7 @@ span #p {
 
 .nav:hover {
   width: 100%;
-  background-color: #3489eb;
+  background-color: #feffff;
   color: white;
   transition: 0.3s;
 }
@@ -38,8 +38,8 @@ span #p {
 }
 
 .nav1:hover {
-  background-color: #3489eb;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(244, 135, 2);
   transition: 0.3s;
 }
 
@@ -74,14 +74,18 @@ span #p {
 .sticky-navbar {
   position: sticky;
   top: 0;
-  z-index: 1000; /* Ensure it's on top of other elements */
-  background-color: #3489eb; /* Optional: Add background color to ensure visibility */
+  z-index: 999;
+  background-color: #3489eb; /* Or your preferred color */
+  color: white;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 20px; /* Adjust radius as needed */
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
+
 
 .menu-spacer {
   flex-grow: 1;
 }
 
-.nav {
-  padding: 10px;
-}

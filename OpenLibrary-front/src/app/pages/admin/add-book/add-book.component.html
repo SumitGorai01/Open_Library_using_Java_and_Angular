@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8 offset-mt-2">
-                <form (ngSubmit)="addBook()">
+                <form (ngSubmit)="addBook()" enctype="multipart/form-data">
 
                     <!-- title -->
                     <div class="mb-3">
@@ -24,15 +24,14 @@
 
                     <!-- image -->
                     <div class="mb-3">
-                        <label for="formFile" class="form-label">Select Image of Book</label>
-                        <input [(ngModel)]="bookData.image" name="image" class="form-control" type="file" id="formFile">
+                        <label for="formFile" class="form-label">Select Image of Book : (Max Size - 5 MB)</label>
+                        <input type="file" (change)="onImageSelected($event)" class="form-control" id="formFile">
                     </div>
 
-                    <!-- publish date -->
+                    <!-- pdf -->
                     <div class="mb-3">
-                        <label for="formFile" class="form-label">Select Book Pdf</label>
-                        <input [(ngModel)]="bookData.bookPdf" name="bookPdf" class="form-control" type="file"
-                            id="formFile">
+                        <label for="formFile" class="form-label">Select Book Pdf : (Max Size - 5 MB) </label>
+                        <input type="file" (change)="onPdfSelected($event)" class="form-control" id="formFile">
                     </div>
 
                     <!-- select authors -->

@@ -3,15 +3,14 @@ import { AuthorService } from '../../../services/author.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import Swal from 'sweetalert2';
 import { BookService } from '../../../services/book.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-add-book',
   templateUrl: './add-book.component.html',
-  styleUrl: './add-book.component.css'
+  styleUrls: ['./add-book.component.css']  // Corrected this
 })
-
 export class AddBookComponent implements OnInit {
-  [x: string]: any;
 
   authors = [
     {
@@ -23,20 +22,25 @@ export class AddBookComponent implements OnInit {
   bookData = {
     bookName: '',
     publishDate: '',
-    image: '',
-    bookPdf: '',
     author: {
       authorId: '',
       authorName: ''
-    },
+    }
   }
 
-  constructor(private _author: AuthorService, private _snack: MatSnackBar, private _book: BookService) { }
+  imageFile: File | null = null;
+  pdfFile: File | null = null;
+
+  constructor(
+    private _author: AuthorService, 
+    private _snack: MatSnackBar, 
+    private _book: BookService,
+    private http: HttpClient   // Inject HttpClient
+  ) {}
 
   ngOnInit(): void {
     this._author.authors().subscribe(
       (data: any) => {
-        // author load
         this.authors = data;
         console.log(this.authors);
       },
@@ -47,60 +51,59 @@ export class AddBookComponent implements OnInit {
     );
   }
 
-  //add-quiz form data
+  onImageSelected(event: any) {
+    const file = event.target.files[0];
+    if (file) {
+      this.imageFile = file;
+    }
+  }
+  
+  onPdfSelected(event: any) {
+    const file = event.target.files[0];
+    if (file) {
+      this.pdfFile = file;
+    }
+  }
+  
   addBook() {
-    if (this.bookData.bookName == '' || this.bookData.bookName == null) {
-      this._snack.open("Book Name is required !! ", "ok", {
-        duration: 3000
-      })
-      return;
-    }
-    if (this.bookData.publishDate == '' || this.bookData.publishDate == null) {
-      this._snack.open("Publish Date is required !! ", "ok", {
-        duration: 3000
-      })
-      return;
-    }
-    if (this.bookData.image == '' || this.bookData.image == null) {
-      this._snack.open("Image is required !! ", "ok", {
-        duration: 3000
-      })
-      return;
-    }
-    if (this.bookData.bookPdf == '' || this.bookData.bookPdf == null) {
-      this._snack.open("Book Pdf is required !! ", "ok", {
-        duration: 3000
-      })
+    if (this.bookData.bookName.trim() === '' || this.bookData.publishDate.trim() === '' || !this.imageFile || !this.pdfFile) {
+      this._snack.open('All fields and files are required !!', 'ok', { duration: 3000 });
       return;
     }
 
-    console.log(this.bookData);
+    const formData = new FormData();
+    formData.append('book', new Blob([JSON.stringify(this.bookData)], { type: 'application/json' }));
+    
+    if (this.imageFile) {
+      formData.append('image', this.imageFile);
+    }
+    if (this.pdfFile) {
+      formData.append('bookPdf', this.pdfFile);
+    }
 
-
-    //call serve
-    this._book.addBook(this.bookData).subscribe(
+    this._book.addBook(formData).subscribe(
       (data: any) => {
-        this.bookData.bookName = '';
-        this.bookData.publishDate = '';
-        this.bookData.image = '';
-        this.bookData.bookPdf = '';
-
-        //success
         console.log(data);
+        this.bookData = {
+          bookName: '',
+          publishDate: '',
+          author: {
+            authorId: '',
+            authorName: ''
+          }
+        };
+        this.imageFile = null;
+        this.pdfFile = null;
 
-        //alert on success
         Swal.fire({
           position: "center",
           icon: "success",
           title: "Book Added Successfully !!",
-          // showConfirmButton: false,
           timer: 2000
         });
       },
       (error: any) => {
-        //error
         console.log(error);
-        // alert('Something went wrong!!')
         Swal.fire({
           icon: "error",
           title: "Oops...Something went wrong!!",
@@ -110,9 +113,6 @@ export class AddBookComponent implements OnInit {
           duration: 3000
         })
       }
-    )
+    );
   }
-
-
-
 }

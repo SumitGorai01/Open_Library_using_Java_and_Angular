@@ -7,7 +7,6 @@ import { Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class LoginService {
-  //  localStorage: any;
   // isLoggedIn(): boolean {
   //   // throw new Error('Method not implemented.');
   // }

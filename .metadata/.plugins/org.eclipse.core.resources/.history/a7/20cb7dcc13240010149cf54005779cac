@@ -1,0 +1,118 @@
+package com.project.openlibrary.controller;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import com.project.openlibrary.entity.Book;
+import com.project.openlibrary.service.BookService;
+
+@Controller
+@RequestMapping("/book")
+@CrossOrigin("*")
+public class BookController {
+
+    public static final String IMAGE_UPLOAD_DIR = "uploads/images/";
+    public static final String PDF_UPLOAD_DIR = "uploads/pdfs/";
+
+    @Autowired
+    private BookService bookService;
+
+    // 1. Create Book (without file)
+    @PostMapping("/")
+    public ResponseEntity<?> addBook(@RequestBody Book book) {
+        Book book1 = this.bookService.addBook(book);
+        return ResponseEntity.ok(book1);
+    }
+
+    // 2. Upload Book Image
+    @PostMapping("/upload-image/{bookId}")
+    public ResponseEntity<?> uploadImage(@PathVariable Integer bookId, @RequestParam("file") MultipartFile file) throws IOException {
+
+        Book book = this.bookService.getBook(bookId);
+
+        if (file.isEmpty()) {
+            return ResponseEntity.badRequest().body("Please select a file to upload.");
+        }
+
+        // Clean filename
+        String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+        
+        // Save file
+        Path uploadPath = Paths.get(IMAGE_UPLOAD_DIR);
+        if (!Files.exists(uploadPath)) {
+            Files.createDirectories(uploadPath);
+        }
+
+        Path filePath = uploadPath.resolve(fileName);
+        Files.copy(file.getInputStream(), filePath);
+
+        // Update book entity
+        book.setImage(fileName);
+        this.bookService.updateBook(book);
+
+        return ResponseEntity.ok("Image uploaded successfully.");
+    }
+
+    // 3. Upload Book PDF
+    @PostMapping("/upload-pdf/{bookId}")
+    public ResponseEntity<?> uploadPDF(@PathVariable Integer bookId, @RequestParam("file") MultipartFile file) throws IOException {
+
+        Book book = this.bookService.getBook(bookId);
+
+        if (file.isEmpty()) {
+            return ResponseEntity.badRequest().body("Please select a PDF to upload.");
+        }
+
+        // Clean filename
+        String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+        
+        // Save file
+        Path uploadPath = Paths.get(PDF_UPLOAD_DIR);
+        if (!Files.exists(uploadPath)) {
+            Files.createDirectories(uploadPath);
+        }
+
+        Path filePath = uploadPath.resolve(fileName);
+        Files.copy(file.getInputStream(), filePath);
+
+        // Update book entity
+        book.setBookPdf(fileName);
+        this.bookService.updateBook(book);
+
+        return ResponseEntity.ok("PDF uploaded successfully.");
+    }
+
+    // Get Single Book
+    @GetMapping("/{bookId}")
+    public ResponseEntity<Book> getBook(@PathVariable Integer bookId) {
+        return ResponseEntity.ok(this.bookService.getBook(bookId));
+    }
+
+    // Get All Books
+    @GetMapping("/")
+    public ResponseEntity<?> getAllBooks() {
+        return ResponseEntity.ok(this.bookService.getAllBooks());
+    }
+
+    // Update Book
+    @PutMapping("/")
+    public ResponseEntity<?> updateBook(@RequestBody Book book) {
+        return ResponseEntity.ok(this.bookService.updateBook(book));
+    }
+
+    // Delete Book
+    @DeleteMapping("/{bookId}")
+    public void deleteBook(@PathVariable Integer bookId) {
+        this.bookService.deleteBook(bookId);
+    }
+}
