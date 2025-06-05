@@ -1,46 +1,78 @@
 <div class="min-h-screen flex items-center justify-center py-2 px-4">
   <div class="grid md:grid-cols-2 items-center gap-2 max-w-6xl w-full">
+    <!-- Image -->
     <div class="max-md:mt-8">
-      <img src="../../../assets/images/Login.gif" class="w-full  mx-auto block object-cover" alt="Dining Experience" />
+      <img src="../../../assets/images/Login.gif" class="w-full mx-auto block object-cover" alt="Dining Experience" />
     </div>
-    <div class="border border-gray-300 rounded-lg p-6 max-w-md shadow-lg max-md:mx-auto">
-      <form  class="space-y-4" (ngSubmit)="formSubmit()">
-        <!-- <div class="mb-2 flex justify-center">
-          <span class="inline-block w-full max-w-[100px]">
-            <img src="assets/logo.png" width="100%" alt="Logo" />
-          </span>
-        </div> -->
 
+    <!-- Login Form -->
+    <div class="border border-gray-300 rounded-lg p-6 max-w-md shadow-lg max-md:mx-auto">
+      <form class="space-y-4" (ngSubmit)="formSubmit()" #loginForm="ngForm">
+
+        <!-- Title -->
         <div class="mb-4">
           <h3 class="text-blue-800 font-bold">Sign in</h3>
-          <p class="text-gray-500 text-sm mt-4 leading-relaxed">Sign in to your account and explore a world of possibilities. Your journey begins here.</p>
+          <p class="text-gray-500 text-sm mt-4 leading-relaxed">
+            Sign in to your account and explore a world of possibilities. Your journey begins here.
+          </p>
         </div>
 
+        <!-- Username (Email or Plain Username) -->
         <div>
-          <label class="text-gray-800 text-sm mb-2 block">Email</label>
-          <input [(ngModel)]="loginData.username" name="username" type="text" class="hover-input w-full text-sm text-gray-800 border border-gray-300 pl-4 pr-10 py-3 rounded-lg outline-orange-600" placeholder="Enter username" />
-          
-        </div>
-
-        <div>
-          <label class="text-gray-800 text-sm mb-2 block">Password</label>
-          <input [(ngModel)]="loginData.password" name="password" type="password" class="hover-input w-full text-sm text-gray-800 border border-gray-300 pl-4 pr-10 py-3 rounded-lg outline-orange-600" placeholder="Enter password" />
-         
-        </div>
-
-        <div class="flex flex-wrap items-center justify-between gap-4">
-          <div class="text-sm">
-            <a routerLink="/forgot-password" class="text-sm text-blue-500 hover:underline">Forgot Your Password?</a>
+          <label class="text-gray-800 text-sm mb-2 block">Username or Email</label>
+          <input
+            [(ngModel)]="loginData.username"
+            name="username"
+            required
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}|[a-zA-Z0-9]+$"
+            #usernameRef="ngModel"
+            type="text"
+            class="hover-input w-full text-sm text-gray-800 border border-gray-300 pl-4 pr-10 py-3 rounded-lg outline-orange-600"
+            placeholder="Enter username or email"
+          />
+          <div *ngIf="usernameRef.invalid && usernameRef.touched" class="text-red-600 text-sm mt-1">
+            <span *ngIf="usernameRef.errors?.['required']">Username or email is required.</span>
+            <span *ngIf="usernameRef.errors?.['pattern']">Enter a valid email or alphanumeric username.</span>
           </div>
         </div>
 
+        <!-- Password -->
+        <div>
+          <label class="text-gray-800 text-sm mb-2 block">Password</label>
+          <input
+            [(ngModel)]="loginData.password"
+            name="password"
+            required
+            minlength="6"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#\$%\^&\*])[A-Za-z\d!@#\$%\^&\*]{6,}$"
+            #passwordRef="ngModel"
+            type="password"
+            class="hover-input w-full text-sm text-gray-800 border border-gray-300 pl-4 pr-10 py-3 rounded-lg outline-orange-600"
+            placeholder="Enter password"
+          />
+          <div *ngIf="passwordRef.invalid && passwordRef.touched" class="text-red-600 text-sm mt-1">
+            <span *ngIf="passwordRef.errors?.['required']">Password is required.</span>
+            <span *ngIf="passwordRef.errors?.['minlength']">Password must be at least 6 characters.</span>
+            <span *ngIf="passwordRef.errors?.['pattern']">
+              Must include uppercase, lowercase, number, and special character.
+            </span>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
         <div class="!mt-8">
-          <button type="submit" class="w-full bg-orange-600 text-white hover:opacity-90 hover:shadow-lg active:scale-95 transition-all py-2.5 px-4 text-sm tracking-wide rounded-lg hover:bg-blue-700 focus:outline-none">
+          <button
+            type="submit"
+            [disabled]="loginForm.invalid"
+            class="w-full bg-orange-600 text-white hover:opacity-90 hover:shadow-lg active:scale-95 transition-all py-2.5 px-4 text-sm tracking-wide rounded-lg hover:bg-blue-700 focus:outline-none"
+          >
             Sign in
           </button>
         </div>
 
-        <p class="text-sm !mt-8 text-center text-gray-500">Don't have an account?
+        <!-- Register Link -->
+        <p class="text-sm !mt-8 text-center text-gray-500">
+          Don't have an account?
           <a routerLink="/signup" class="text-blue-600 font-semibold hover:underline ml-1">Register here</a>
         </p>
       </form>
